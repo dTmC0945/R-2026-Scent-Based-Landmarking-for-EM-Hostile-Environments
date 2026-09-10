@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang='en'>  
+<head><title>Conclusion and Future Work</title> 
+<meta charset='utf-8' /> 
+<meta content='lms-WebBook' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='ConferencePaperMain.css' rel='stylesheet' type='text/css' /> 
+<meta content='ConferencePaperMain.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<meta state='paper' /> 
+<link href='logo/lms.ico' rel='icon' type='image/x-icon' /> 
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script> 
+<link href='https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css' rel='stylesheet' /> 
+<link href='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css' rel='stylesheet' type='text/css' /> 
+<script async='true' crossorigin='anonymous' src='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css' rel='stylesheet' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css' rel='stylesheet' /> 
+<script src='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js'></script> 
+<link href='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css' rel='stylesheet' /> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js'></script> 
+ </head><body>
+   <page> 
+<nav class='wide'><img class='webbook-logo' src='logo/webbook-logo.svg' /> <div class='header'> <div class='header-left'><span class='header-lecture-grade'>RoManSy 
+</span><span class='header-lecture-name'>Scent-Based Landmark and Communication for EM Hostile Environments 
+</span><span class='header-webBook'>WebBook 2.1</span> </div> <div class='header-right'> <span class='header-version'>2026</span> 
+ </div></div> <div class='toc'><div class='toc-links'><a href='https://github.com/dTmC0945' title='Lecturer GitHub Repo'><i class='fab fa-github' style='font-size:20px'></i></a><a href='https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ' title='Lecturer Google Scholar Page'><i class='fa-brands fa-google-scholar' style='font-size:20px'></i></a><a href='https://www.researchgate.net/profile/Daniel-Mcguiness-2' title='Lecturer ResearchGate Account'><i class='fa-brands fa-researchgate' style='font-size:20px'></i></a></div><hr /><span class='sectionToc'><span class='number'>1</span><span class='title'><a href='Introduction.html#introduction'>Introduction</a></span></span><span class='sectionToc'><span class='number'>2</span><span class='title'><a href='DefiningthePhysicalLayer.html#defining-the-physical-layer'>Defining the Physical Layer</a></span></span><span class='subsectionToc'><span class='number'>2.1</span><span class='title'><a href='DefiningthePhysicalLayer.html#a-mathematical-model'>A Mathematical Model</a></span></span><span class='sectionToc'><span class='number'>3</span><span class='title'><a href='DefiningtheLandmark.html#defining-the-landmark'>Defining
+the Landmark</a></span></span><span class='subsectionToc'><span class='number'>3.1</span><span class='title'><a href='DefiningtheLandmark.html#operation-principle'>Operation Principle</a></span></span><span class='subsectionToc'><span class='number'>3.2</span><span class='title'><a href='DefiningtheLandmark.html#volatile-organic-compounds'>Volatile Organic Compounds</a></span></span><span class='subsectionToc'><span class='number'>3.3</span><span class='title'><a href='DefiningtheLandmark.html#detection-of-chemical-odour'>Detection of
+Chemical Odour</a></span></span><span class='subsectionToc'><span class='number'>3.4</span><span class='title'><a href='DefiningtheLandmark.html#chemical-quadrature-amplitude-modulation'>Chemical Quadrature Amplitude Modulation</a></span></span><span class='sectionToc'><span class='number'>4</span><span class='title'><a href='CommunicationTests.html#communication-tests'>Communication
+Tests</a></span></span><span class='sectionToc'><span class='number'>5</span><span class='title'><a href='#conclusion-and-future-work'>Conclusion and Future Work</a></span></span>
+<!-- l. 494 --><p class='indent'>   </p><div class='nav-footer'><div class='nav-footer-left'><span class='nav-footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='nav-footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span></div></div><span class='nav-comments'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav> 
+
+<p></p>
+   <article class='chapter'> 
+<nav class='crosslinks-top'> <a href='refname.html'><span class='nav-next'>NEXT</span></a><a href='CommunicationTests.html'><span class='nav-prev'>PREV</span></a><a href='CommunicationTests.html#tailCommunicationTests.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='#tailConclusionandFutureWork.html'><span class='nav-tail'>TAIL</span></a><a href='ConferencePaperMain.html#ConclusionandFutureWork.html'><span class='nav-up'>UP</span></a></nav> 
+<div class='section-header'> <h3 id='header-section-5'> <a class='pdf-icon' href='ConferencePaperMain.pdf'><svg class='bi bi-file-pdf' fill='currentColor' height='20' viewbox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z'></path><path d='M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z'></path></svg></a><span class='number'>5 </span><span class='title' id='conclusion-and-future-work'>  <a id='x6-130005'></a>Conclusion and Future Work</span></h3></div><p>
+<!-- l. 496 --></p><p class='indent'>   In this work a proof-of-concept method was shown which implemented chemicals
+for land-marking instead of using vision or EM waves. In pursuit of this idea, a
+mathematical framework was developed based on the diffusion equation. Constraints
+were introduced to aid in its simplification and a model was derived which quantifies
+the signal received by a sensor. Using the model, channel calculations were conducted
+to see the validity of using scent land-marking to convey information. The results
+have shown that when chemicals with suitable values (i.e., low diffusivity) where
+both chemical having similar diffusivity coefficient were chosen, it is possible
+for a mobile robot to detect the scent embedded to the environment and
+decode information about the previous robot which left the message minutes
+later.
+</p><!-- l. 506 --><p class='indent'>   Future-work will focus on increasing the information embedded to chemicals using
+different encoding methods and conduct field experiments.
+</p><!-- l. 511 --><p class='indent'>   <a id='x6-13001f0'></a>
+<a id='x6-13003f0'></a>
+<a id='x6-13005f0'></a>
+<a id='x6-13007f0'></a>
+                                                                  
+
+                                                                  
+</p>
+   <div class='crosslinks-bottom'><a href='refname.html'><span class='nav-next'>NEXT</span></a><a href='CommunicationTests.html'><span class='nav-prev'>PREV</span></a><a href='CommunicationTests.html#tailCommunicationTests.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='ConclusionandFutureWork.html'><span class='nav-front'>FRONT</span></a><a href='ConferencePaperMain.html#ConclusionandFutureWork.html'><span class='nav-up'>UP</span></a><a id='tailConclusionandFutureWork.html'></a> </div> <div class='footer'> <div class='footer-left'><span class='footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span> </div> </div> 
+<div class='author-notes'> 
+<span class='note'>Authors Note  
+</span><span class='text'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span> 
+</div>
+<div class='footnotes'>   <aside class='footnotetext' role='doc-footnote'>
+  <!-- l. 511 --><p class='noindent'><a id='x6-13002x5'></a><span class='footnote-mark'><a href='DefiningthePhysicalLayer.html#fn1x0-bk' id='fn1x0'><sup class='textsuperscript'>1</sup> </a></span><!-- l. 511 --><math display='inline'><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>1.380</mn><mspace class='thinspace' width='0.17em'></mspace><mn>609</mn> <mo class='MathClass-bin' stretchy='false'>×</mo> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>23</mn></mrow></msup><mstyle mathvariant='normal'><mi>J</mi></mstyle><mspace class='thinspace' width='0.17em'></mspace><msup><mrow><mstyle mathvariant='normal'><mi>K</mi></mstyle></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>1</mn></mrow></msup></mrow></math></p></aside> 
+
+   <aside class='footnotetext' role='doc-footnote'>
+  <!-- l. 513 --><p class='noindent'><a id='x6-13004x5'></a><span class='footnote-mark'><a href='DefiningthePhysicalLayer.html#fn2x0-bk' id='fn2x0'><sup class='textsuperscript'>2</sup> </a></span><span class='cmr-9'>The </span><!-- l. 513 --><math display='inline'><mi>𝜖</mi></math>
+  <span class='cmr-9'>term is there for mathematical bookkeeping as, practically it can be ignored without any
+  loss in accuracy.</span></p></aside> 
+<aside class='footnotetext' role='doc-footnote'>
+  <!-- l. 514 --><p class='noindent'><a id='x6-13006x5'></a><span class='footnote-mark'><a href='DefiningtheLandmark.html#fn3x0-bk' id='fn3x0'><sup class='textsuperscript'>3</sup> </a></span><span class='cmr-9'>This statement is true as long as proper care is taken on the chemicals used.</span></p></aside> 
+<aside class='footnotetext' role='doc-footnote'>
+  <!-- l. 515 --><p class='noindent'><a id='x6-13008x5'></a><span class='footnote-mark'><a href='DefiningtheLandmark.html#fn4x0-bk' id='fn4x0'><sup class='textsuperscript'>4</sup> </a></span><span class='cmr-9'>i.e., when chemicals have no alignment in their mass spectrum.</span></p></aside> 
+                </div>
+</article> 
+<div class='mode-line'> 
+<div class='core-line'> 
+<div class='button-group'> 
+</div> 
+</div> 
+<div class='supp-line'></div> 
+</div> 
+</page>  
+</body> 
+</html>

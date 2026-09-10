@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang='en'>  
+<head><title>Introduction</title> 
+<meta charset='utf-8' /> 
+<meta content='lms-WebBook' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='ConferencePaperMain.css' rel='stylesheet' type='text/css' /> 
+<meta content='ConferencePaperMain.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<meta state='paper' /> 
+<link href='logo/lms.ico' rel='icon' type='image/x-icon' /> 
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script> 
+<link href='https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css' rel='stylesheet' /> 
+<link href='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css' rel='stylesheet' type='text/css' /> 
+<script async='true' crossorigin='anonymous' src='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css' rel='stylesheet' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css' rel='stylesheet' /> 
+<script src='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js'></script> 
+<link href='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css' rel='stylesheet' /> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js'></script> 
+ </head><body>
+                                                                  
+
+                                                                  
+   <page> 
+<nav class='wide'><img class='webbook-logo' src='logo/webbook-logo.svg' /> <div class='header'> <div class='header-left'><span class='header-lecture-grade'>RoManSy 
+</span><span class='header-lecture-name'>Scent-Based Landmark and Communication for EM Hostile Environments 
+</span><span class='header-webBook'>WebBook 2.1</span> </div> <div class='header-right'> <span class='header-version'>2026</span> 
+ </div></div> <div class='toc'><div class='toc-links'><a href='https://github.com/dTmC0945' title='Lecturer GitHub Repo'><i class='fab fa-github' style='font-size:20px'></i></a><a href='https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ' title='Lecturer Google Scholar Page'><i class='fa-brands fa-google-scholar' style='font-size:20px'></i></a><a href='https://www.researchgate.net/profile/Daniel-Mcguiness-2' title='Lecturer ResearchGate Account'><i class='fa-brands fa-researchgate' style='font-size:20px'></i></a></div><hr /><span class='sectionToc'><span class='number'>1</span><span class='title'><a href='#introduction'>Introduction</a></span></span><span class='sectionToc'><span class='number'>2</span><span class='title'><a href='DefiningthePhysicalLayer.html#defining-the-physical-layer'>Defining the Physical Layer</a></span></span><span class='subsectionToc'><span class='number'>2.1</span><span class='title'><a href='DefiningthePhysicalLayer.html#a-mathematical-model' id='QQ2-3-5'>A Mathematical Model</a></span></span><span class='sectionToc'><span class='number'>3</span><span class='title'><a href='DefiningtheLandmark.html#defining-the-landmark'>Defining
+the Landmark</a></span></span><span class='subsectionToc'><span class='number'>3.1</span><span class='title'><a href='DefiningtheLandmark.html#operation-principle' id='QQ2-4-8'>Operation Principle</a></span></span><span class='subsectionToc'><span class='number'>3.2</span><span class='title'><a href='DefiningtheLandmark.html#volatile-organic-compounds' id='QQ2-4-10'>Volatile Organic Compounds</a></span></span><span class='subsectionToc'><span class='number'>3.3</span><span class='title'><a href='DefiningtheLandmark.html#detection-of-chemical-odour' id='QQ2-4-13'>Detection of
+Chemical Odour</a></span></span><span class='subsectionToc'><span class='number'>3.4</span><span class='title'><a href='DefiningtheLandmark.html#chemical-quadrature-amplitude-modulation' id='QQ2-4-16'>Chemical Quadrature Amplitude Modulation</a></span></span><span class='sectionToc'><span class='number'>4</span><span class='title'><a href='CommunicationTests.html#communication-tests'>Communication
+Tests</a></span></span><span class='sectionToc'><span class='number'>5</span><span class='title'><a href='ConclusionandFutureWork.html#conclusion-and-future-work'>Conclusion and Future Work</a></span></span>
+<!-- l. 8 --><p class='indent'>   </p><div class='nav-footer'><div class='nav-footer-left'><span class='nav-footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='nav-footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span></div></div><span class='nav-comments'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav> 
+
+<p></p>
+   <article class='chapter'> 
+<nav class='crosslinks-top'> <a href='DefiningthePhysicalLayer.html'><span class='nav-next'>NEXT</span></a><span class='nav-inactive'><span class='nav-prev'>PREV</span></span> <span class='nav-inactive'><span class='nav-prev-tail'>PREV-TAIL</span></span> <a href='#tailIntroduction.html'><span class='nav-tail'>TAIL</span></a><a href='ConferencePaperMain.html#Introduction.html'><span class='nav-up'>UP</span></a></nav> 
+<div class='section-header'> <h3 id='header-section-1'> <a class='pdf-icon' href='ConferencePaperMain.pdf'><svg class='bi bi-file-pdf' fill='currentColor' height='20' viewbox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z'></path><path d='M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z'></path></svg></a><span class='number'>1 </span><span class='title' id='introduction'>  <a id='x2-10001'></a>Introduction</span></h3></div><p>
+<!-- l. 10 --></p><p class='indent'>   Electro-Magnetic (EM) wave communication has changed how information is
+exchanged and allowed communication of immeasurable distances to be measured in
+milliseconds. It also allows us to communicate with robots which can act in a wide
+variety of environments and has shown to be efficient and robust for most cases <span class='cite'> [<a href='refname.html#Xgalceran2013survey'>1</a>]</span>.
+However, not every environment can easily be navigated with EM-waves as caves
+and places which encountered natural disasters can prove hard to transmit
+information <span class='cite'> [<a href='refname.html#Xwalsh2018communications'>2</a>]</span>. The primary problem in using EM-waves is that they are
+attenuated as they pass through a conducting medium. There are numerous
+detriments caused by using EM-waves such as; range-dependent effects <span class='cite'> [<a href='refname.html#Xyavuz2009cave'>3</a>]</span>,
+depolarisation effects <span class='cite'> [<a href='refname.html#Xbedford2019modeling'>4</a>]</span>, antenna height gain effects <span class='cite'> [<a href='refname.html#Xbedford2019modeling'>4</a>]</span>, the subterranean gallery
+geometry <span class='cite'> [<a href='refname.html#Xrak2007uhf'>5</a>]</span>, and multi-scattering effect <span class='cite'> [<a href='refname.html#Xsoo2018propagation'>6</a>]</span> on the propagating radio waves in
+caves.
+</p><!-- l. 22 --><p class='indent'>   An important application of interest is disaster scenarios <span class='cite'> [<a href='refname.html#Xschwaiger2024semi'>7</a>]</span>, where
+communication systems can fail and environment can become inhospitable for human
+exploration <span class='cite'> [<a href='refname.html#Xgalceran2013survey'>1</a>, <a href='refname.html#Xrooker2007multi'>8</a>, <a href='refname.html#Xmurphy2008search'>9</a>]</span>. While temporary infrastructure for communication can
+quickly be established, these can’t necessarily penetrate the rubble of collapsed
+buildings and can be generally the limiting factor of their applicability <span class='cite'> [<a href='refname.html#Xnguyen2004maintaining'>10</a>]</span> so
+algorithms for multi-robot exploration in these situations must be able to
+accommodate the limited and variable communication available to them <span class='cite'> [<a href='refname.html#Xjensen2019effects'>11</a>]</span>.
+</p><!-- l. 31 --><p class='indent'>   In a disaster scenario, It is necessary for the robots to complete exploration as
+quickly and efficiently as possible, and minimising repeated coverage of any area in
+the initial exploration phase helps reduce exploration time. With a small team of
+robots, it is common to use beacons to mark explored areas <span class='cite'> [<a href='refname.html#Xbrass2011multirobot'>12</a>, <a href='refname.html#Xjensen2013rolling'>13</a>, <a href='refname.html#Xmoreira2020new'>14</a>]</span>, inspired by
+animal behaviour <span class='cite'> [<a href='refname.html#Xmamei2007pervasive'>15</a>]</span>, where these beacons enable the robots to reduce
+repeated coverage and explore larger environments without having to create
+maps.
+</p><!-- l. 39 --><p class='indent'>   Regarding a viable alternative to the aforementioned challenges is the
+use of scent based communication which has significant research behind
+it <span class='cite'> [<a href='refname.html#Xchen2019odor'>16</a>, <a href='refname.html#Xjing2021recent'>17</a>, <a href='refname.html#Xwang2022odor'>18</a>, <a href='refname.html#Xfrancis2022gas'>19</a>, <a href='refname.html#Xgaurav2024moth'>20</a>, <a href='refname.html#Xjain2025review'>21</a>]</span> along with Molecular Communication (MC), where
+information is encoded into a chemical source <span class='cite'> [<a href='refname.html#Xfarsad2016comprehensive'>22</a>]</span>, which this research attempts to
+implement.
+</p><!-- l. 45 --><p class='indent'>   In this paper an alternative framework for mobile robotic communication is
+proposed for use in cave exploration/disaster scenarios for rapid exploration of the
+environment. To achieve this, scent-based packages will be used which will be placed
+by robots exploring, to provide simple transmission of information where these
+chemical messages will be designed using volatile organic compounds. To achieve
+proper data transmission, concepts developed in MCs will be used to analytically
+                                                                  
+
+                                                                  
+study the Bit-Error Rate (BER) and Mutual Information (MI) and its reliability of
+data acquisition.
+                                                                  
+
+                                                                  
+</p>
+   <div class='crosslinks-bottom'><a href='DefiningthePhysicalLayer.html'><span class='nav-next'>NEXT</span></a><span class='nav-inactive'><span class='nav-prev'>PREV</span></span> <span class='nav-inactive'><span class='nav-prev-tail'>PREV-TAIL</span></span> <a href='Introduction.html'><span class='nav-front'>FRONT</span></a><a href='ConferencePaperMain.html#Introduction.html'><span class='nav-up'>UP</span></a><a id='tailIntroduction.html'></a> </div> <div class='footer'> <div class='footer-left'><span class='footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span> </div> </div> 
+<div class='author-notes'> 
+<span class='note'>Authors Note  
+</span><span class='text'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span> 
+</div> 
+</article> 
+<div class='mode-line'> 
+<div class='core-line'> 
+<div class='button-group'> 
+</div> 
+</div> 
+<div class='supp-line'></div> 
+</div> 
+</page> 
+ 
+</body> 
+</html>

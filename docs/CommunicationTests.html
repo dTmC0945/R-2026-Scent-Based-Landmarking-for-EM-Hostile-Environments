@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang='en'>  
+<head><title>Communication Tests</title> 
+<meta charset='utf-8' /> 
+<meta content='lms-WebBook' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='ConferencePaperMain.css' rel='stylesheet' type='text/css' /> 
+<meta content='ConferencePaperMain.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<meta state='paper' /> 
+<link href='logo/lms.ico' rel='icon' type='image/x-icon' /> 
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script> 
+<link href='https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css' rel='stylesheet' /> 
+<link href='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css' rel='stylesheet' type='text/css' /> 
+<script async='true' crossorigin='anonymous' src='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css' rel='stylesheet' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css' rel='stylesheet' /> 
+<script src='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js'></script> 
+<link href='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css' rel='stylesheet' /> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js'></script> 
+ </head><body>
+   <page> 
+<nav class='wide'><img class='webbook-logo' src='logo/webbook-logo.svg' /> <div class='header'> <div class='header-left'><span class='header-lecture-grade'>RoManSy 
+</span><span class='header-lecture-name'>Scent-Based Landmark and Communication for EM Hostile Environments 
+</span><span class='header-webBook'>WebBook 2.1</span> </div> <div class='header-right'> <span class='header-version'>2026</span> 
+ </div></div> <div class='toc'><div class='toc-links'><a href='https://github.com/dTmC0945' title='Lecturer GitHub Repo'><i class='fab fa-github' style='font-size:20px'></i></a><a href='https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ' title='Lecturer Google Scholar Page'><i class='fa-brands fa-google-scholar' style='font-size:20px'></i></a><a href='https://www.researchgate.net/profile/Daniel-Mcguiness-2' title='Lecturer ResearchGate Account'><i class='fa-brands fa-researchgate' style='font-size:20px'></i></a></div><hr /><span class='sectionToc'><span class='number'>1</span><span class='title'><a href='Introduction.html#introduction'>Introduction</a></span></span><span class='sectionToc'><span class='number'>2</span><span class='title'><a href='DefiningthePhysicalLayer.html#defining-the-physical-layer'>Defining the Physical Layer</a></span></span><span class='subsectionToc'><span class='number'>2.1</span><span class='title'><a href='DefiningthePhysicalLayer.html#a-mathematical-model'>A Mathematical Model</a></span></span><span class='sectionToc'><span class='number'>3</span><span class='title'><a href='DefiningtheLandmark.html#defining-the-landmark'>Defining
+the Landmark</a></span></span><span class='subsectionToc'><span class='number'>3.1</span><span class='title'><a href='DefiningtheLandmark.html#operation-principle'>Operation Principle</a></span></span><span class='subsectionToc'><span class='number'>3.2</span><span class='title'><a href='DefiningtheLandmark.html#volatile-organic-compounds'>Volatile Organic Compounds</a></span></span><span class='subsectionToc'><span class='number'>3.3</span><span class='title'><a href='DefiningtheLandmark.html#detection-of-chemical-odour'>Detection of
+Chemical Odour</a></span></span><span class='subsectionToc'><span class='number'>3.4</span><span class='title'><a href='DefiningtheLandmark.html#chemical-quadrature-amplitude-modulation'>Chemical Quadrature Amplitude Modulation</a></span></span><span class='sectionToc'><span class='number'>4</span><span class='title'><a href='#communication-tests'>Communication
+Tests</a></span></span><span class='sectionToc'><span class='number'>5</span><span class='title'><a href='ConclusionandFutureWork.html#conclusion-and-future-work'>Conclusion and Future Work</a></span></span>
+<!-- l. 413 --><p class='indent'>   </p><div class='nav-footer'><div class='nav-footer-left'><span class='nav-footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='nav-footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span></div></div><span class='nav-comments'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav> 
+
+<p></p>
+   <article class='chapter'> 
+<nav class='crosslinks-top'> <a href='ConclusionandFutureWork.html'><span class='nav-next'>NEXT</span></a><a href='DefiningtheLandmark.html'><span class='nav-prev'>PREV</span></a><a href='DefiningtheLandmark.html#tailDefiningtheLandmark.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='#tailCommunicationTests.html'><span class='nav-tail'>TAIL</span></a><a href='ConferencePaperMain.html#CommunicationTests.html'><span class='nav-up'>UP</span></a></nav> 
+<div class='section-header'> <h3 id='header-section-4'> <a class='pdf-icon' href='ConferencePaperMain.pdf'><svg class='bi bi-file-pdf' fill='currentColor' height='20' viewbox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z'></path><path d='M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z'></path></svg></a><span class='number'>4 </span><span class='title' id='communication-tests'>  <a id='x5-120004'></a>Communication Tests</span></h3></div><p>
+   </p><figure class='figure'> 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+<!-- l. 418 --><p class='noindent' id='the-detected-concentration-levels-of-chqam-with-a-snr-of-20-db-from-left-to-right-a-with-a-diffusion-ratio-of-3-b-distance-of-1cm-c-listening-rate-of-30-s-the-parameters-of-the-simulations-are-shown-in-tabsimulationparameters'> <img alt='PIC' src='figures/Paper-Content/figures-3.png' style='width:100%' /> <a id='x5-12001r3'></a>
+</p>
+<figcaption class='caption'><span class='id'><span class='cmbx-7'>Fig.3: </span></span><span class='content'><span class='cmr-7'>The detected concentration levels of Chemical Quadrature Modulation (ChQAM) with a
+SNR of 20 dB. From left to right (a) With a diffusion ratio of 3 (b) distance of 1cm (c) Listening
+rate of 30 s. The parameters of the simulations are shown in Table </span><a href='#simulation-parameters-for-the-communication-study-mass-is-measured-in-diffusion-is-measured-in-'><span class='cmr-7'>2</span></a><span class='cmr-7'>.</span>                    </span></figcaption><!-- tex4ht:label?: x5112001r3  -->
+                                                                  
+
+                                                                  
+   </figure>
+<!-- l. 428 --><p class='indent'>   To understand the feasibility of the detection of chemicals, a bit-error-rate and
+mutual information study was conducted. While a scent landmark can’t generate a
+stream of bits similar to a transmitter, nevertheless it is an information source and
+therefore a BER analysis would provide with the error probability of information or
+how much information can be embedded using a scent landmark using ChQAM. The
+simulation results can be seen in Fig. <a href='#simulation-results-of-scentbased-detection-system-from-topleft-first-row-signaltonoise-v-biterror-rate-ratio-comparison-of-a-different-diffusion-coefficient-ratios-b-detection-distance-c-listening-duration-from-left-second-row-d-signaltonoise-ratio-v-mutual-information-of-a-different-diffusion-coefficient-ratios-b-detection-distance-c-listening-duration'>4</a> with detected values in Fig. <a href='#the-detected-concentration-levels-of-chqam-with-a-snr-of-20-db-from-left-to-right-a-with-a-diffusion-ratio-of-3-b-distance-of-1cm-c-listening-rate-of-30-s-the-parameters-of-the-simulations-are-shown-in-tabsimulationparameters'>3</a>. The
+parameters of simulation are given in Table <a href='#simulation-parameters-for-the-communication-study-mass-is-measured-in-diffusion-is-measured-in-'>2</a>.
+</p>
+   <div class='table'>
+                                                                  
+
+                                                                  
+<!-- l. 436 --><p class='indent'>   </p><figure class='float' id='x5-12002r2'><span id='simulation-parameters-for-the-communication-study-mass-is-measured-in-diffusion-is-measured-in-'></span>
+                                                                  
+
+                                                                  
+
+<figcaption class='caption'><span class='id'><span class='cmbx-7'>Table 2:   </span></span><span class='content'><span class='cmr-7'>Simulation   Parameters   for   the   communication   study.   Mass   is   measured   in</span>
+<!-- l. 439 --><math display='inline'><mstyle mathvariant='normal'><mi>g</mi></mstyle></math><span class='cmr-7'>,
+diffusion is measured in </span><!-- l. 439 --><math display='inline'><mrow><msup><mrow><mstyle mathvariant='normal'><mi>cm</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup><mspace class='thinspace' width='0.17em'></mspace><msup><mrow><mstyle mathvariant='normal'><mi>s</mi></mstyle></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>1</mn></mrow></msup></mrow></math><span class='cmr-7'>.</span></span></figcaption><!-- tex4ht:label?: x5112002r2  -->
+<div class='tabular'>
+ <table class='tabular' id='TBL-3'><colgroup id='TBL-3-1g'><col id='TBL-3-1' /><col id='TBL-3-2' /><col id='TBL-3-3' /><col id='TBL-3-4' /></colgroup><tr id='TBL-3-1-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-1-1' style='text-align:right; white-space:nowrap;'>Parameters</td><td class='td11' id='TBL-3-1-2' style='text-align:center; white-space:nowrap;'>                              Diffusion                                               </td><td class='td11' id='TBL-3-1-3' style='text-align:center; white-space:nowrap;'>                              Distance                                               </td><td class='td11' id='TBL-3-1-4' style='text-align:center; white-space:nowrap;'>                              Symbol                                                </td>
+</tr><tr id='TBL-3-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-2-1' style='text-align:right; white-space:nowrap;'>       Seed</td><td class='td11' id='TBL-3-2-2' style='text-align:center; white-space:nowrap;'>                             42 and 89                                              </td><td class='td11' id='TBL-3-2-3' style='text-align:center; white-space:nowrap;'>                             42 and 89                                              </td><td class='td11' id='TBL-3-2-4' style='text-align:center; white-space:nowrap;'>                             42 and 89                                              </td></tr><tr id='TBL-3-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-3-1' style='text-align:right; white-space:nowrap;'> Mass</td><td class='td11' id='TBL-3-3-2' style='text-align:center; white-space:nowrap;'> 1 </td><td class='td11' id='TBL-3-3-3' style='text-align:center; white-space:nowrap;'> 1 </td><td class='td11' id='TBL-3-3-4' style='text-align:center; white-space:nowrap;'> 1</td>
+</tr><tr id='TBL-3-4-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-4-1' style='text-align:right; white-space:nowrap;'>     Levels</td><td class='td11' id='TBL-3-4-2' style='text-align:center; white-space:nowrap;'>                                 2                                                    </td><td class='td11' id='TBL-3-4-3' style='text-align:center; white-space:nowrap;'>                                 2                                                    </td><td class='td11' id='TBL-3-4-4' style='text-align:center; white-space:nowrap;'>                                 2                                                    </td></tr><tr id='TBL-3-5-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-5-1' style='text-align:right; white-space:nowrap;'> Bit Counts</td><td class='td11' id='TBL-3-5-2' style='text-align:center; white-space:nowrap;'><!-- l. 448 --><math display='inline'><mrow><mn>20</mn><mo class='MathClass-punc' stretchy='false'>.</mo><mn>000</mn></mrow></math></td><td class='td11' id='TBL-3-5-3' style='text-align:center; white-space:nowrap;'><!-- l. 448 --><math display='inline'><mrow><mn>20</mn><mo class='MathClass-punc' stretchy='false'>.</mo><mn>000</mn></mrow></math></td><td class='td11' id='TBL-3-5-4' style='text-align:center; white-space:nowrap;'><!-- l. 448 --><math display='inline'><mrow><mn>20</mn><mo class='MathClass-punc' stretchy='false'>.</mo><mn>000</mn></mrow></math></td>
+
+</tr><tr id='TBL-3-6-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-6-1' style='text-align:right; white-space:nowrap;'>   Diffusion</td><td class='td11' id='TBL-3-6-2' style='text-align:center; white-space:nowrap;'>                         [0.5, 1, 1.5, 2.0 ,2.5]                                        </td><td class='td11' id='TBL-3-6-3' style='text-align:center; white-space:nowrap;'><!-- l. 450 --><math display='inline'><mrow><mn>8.8</mn> <mo class='MathClass-bin' stretchy='false'>×</mo> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>2</mn></mrow></msup></mrow></math> </td><td class='td11' id='TBL-3-6-4' style='text-align:center; white-space:nowrap;'><!-- l. 450 --><math display='inline'><mrow><mn>8.8</mn> <mo class='MathClass-bin' stretchy='false'>×</mo> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>2</mn></mrow></msup></mrow></math> </td>
+</tr><tr id='TBL-3-7-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-7-1' style='text-align:right; white-space:nowrap;'>   Distance</td><td class='td11' id='TBL-3-7-2' style='text-align:center; white-space:nowrap;'>                                 1                                                    </td><td class='td11' id='TBL-3-7-3' style='text-align:center; white-space:nowrap;'>                         [0.5, 1, 1.5, 2.0 ,2.5]                                        </td><td class='td11' id='TBL-3-7-4' style='text-align:center; white-space:nowrap;'>                                 1                                                    </td>
+</tr><tr id='TBL-3-8-' style='vertical-align:baseline;'><td class='td11' id='TBL-3-8-1' style='text-align:right; white-space:nowrap;'>      Time</td><td class='td11' id='TBL-3-8-2' style='text-align:center; white-space:nowrap;'>                                30                                                   </td><td class='td11' id='TBL-3-8-3' style='text-align:center; white-space:nowrap;'>                                30                                                   </td><td class='td11' id='TBL-3-8-4' style='text-align:center; white-space:nowrap;'>                         [30, 60, 90, 120, 150]                                       </td>
+
+</tr></table>                                                                                                                                                                                                              </div>
+                                                                  
+
+                                                                  
+   </figure>
+   </div>
+<!-- l. 458 --><p class='indent'>   In the study, three primary parameters were tested: diffusion coefficient, distance,
+and listening time (i.e., symbol time). In the diffusion study the value is kept at
+<!-- l. 459 --><math display='inline'><mrow><mn>8.8</mn> <mo class='MathClass-bin' stretchy='false'>×</mo> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>2</mn></mrow></msup></mrow></math> with
+each iteration the ratio of the was changed. The simulation range for Signal-to-Noise
+Ratio (SNR) was kept from 10 to 50 dB.
+</p><!-- l. 463 --><p class='indent'>   As can be seen, the diffusion ratio (<!-- l. 463 --><math display='inline'><mrow><msub><mrow><mi>D</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class='MathClass-bin' stretchy='false'>∕</mo><msub><mrow><mi>D</mi></mrow><mrow><mi>B</mi></mrow></msub></mrow></math>)
+plays an important roles in the performance of mutual information or the error rate of
+detection, whereas distance and symbol time play a significantly more prominent role
+as to be expected. From the perspective of diffusion, this implies the correct decision
+of diffusion constant for the landmarks needs to be explicit as slight variations on the
+diffusion parameters can presents an asymmetrical detection of bits which can cause
+additional detection of errors which can also be seen in Fig. <a href='#the-detected-concentration-levels-of-chqam-with-a-snr-of-20-db-from-left-to-right-a-with-a-diffusion-ratio-of-3-b-distance-of-1cm-c-listening-rate-of-30-s-the-parameters-of-the-simulations-are-shown-in-tabsimulationparameters'>3</a>, sub-figure (a). As can
+be seen in the figure, the increase of the diffusion coefficient, while increases
+the propagation speed, also increases the dispersion of the chemical and
+causes the signal to degrade, which in the end causes the signal to be wrongly
+classified.
+</p><!-- l. 474 --><p class='indent'>   In regards to the symbol length, or the duration in which signal is being read, the
+improvements are significant as more time is devoted to reading the signal. Increasing
+the signal reading time from 30 to 60 s increases the readable information content
+from 1.5 to 1.8 shannon with SNR being 15 dB. This shows that, under less than ideal
+environments for chemical communication, a longer period of listening can produce
+higher information content to be read accurately. The SNR shows significant rate of
+improvement up to 30 dB with additional improvement gives incremental
+gain.
+</p>
+   <figure class='figure'> 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+<!-- l. 483 --><p class='noindent' id='simulation-results-of-scentbased-detection-system-from-topleft-first-row-signaltonoise-v-biterror-rate-ratio-comparison-of-a-different-diffusion-coefficient-ratios-b-detection-distance-c-listening-duration-from-left-second-row-d-signaltonoise-ratio-v-mutual-information-of-a-different-diffusion-coefficient-ratios-b-detection-distance-c-listening-duration'> <img alt='PIC' src='figures/Paper-Content/figures-4.png' style='width:100%' /> <a id='x5-12003r4'></a>
+</p>
+<figcaption class='caption'><span class='id'><span class='cmbx-7'>Fig.4: </span></span><span class='content'><span class='cmr-7'>Simulation results of scent-based detection system. From top-left first row; signal-to-noise
+v. bit-error rate ratio comparison of (a) different diffusion coefficient ratios, (b) detection distance
+(c) listening duration. From left second row; (d) signal-to-noise ratio v. mutual information of (a)
+different diffusion coefficient ratios, (b) detection distance (c) listening duration.</span>            </span></figcaption><!-- tex4ht:label?: x5112003r4  -->
+                                                                  
+
+                                                                  
+   </figure>
+                                                                  
+
+                                                                  
+   <div class='crosslinks-bottom'><a href='ConclusionandFutureWork.html'><span class='nav-next'>NEXT</span></a><a href='DefiningtheLandmark.html'><span class='nav-prev'>PREV</span></a><a href='DefiningtheLandmark.html#tailDefiningtheLandmark.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='CommunicationTests.html'><span class='nav-front'>FRONT</span></a><a href='ConferencePaperMain.html#CommunicationTests.html'><span class='nav-up'>UP</span></a><a id='tailCommunicationTests.html'></a> </div> <div class='footer'> <div class='footer-left'><span class='footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span> </div> </div> 
+<div class='author-notes'> 
+<span class='note'>Authors Note  
+</span><span class='text'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span> 
+</div> 
+</article> 
+<div class='mode-line'> 
+<div class='core-line'> 
+<div class='button-group'> 
+</div> 
+</div> 
+<div class='supp-line'></div> 
+</div> 
+</page> 
+ 
+</body> 
+</html>

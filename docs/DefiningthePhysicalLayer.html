@@ -1,0 +1,227 @@
+<!DOCTYPE html> 
+<html lang='en'>  
+<head><title>Defining the Physical Layer</title> 
+<meta charset='utf-8' /> 
+<meta content='lms-WebBook' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='ConferencePaperMain.css' rel='stylesheet' type='text/css' /> 
+<meta content='ConferencePaperMain.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<meta state='paper' /> 
+<link href='logo/lms.ico' rel='icon' type='image/x-icon' /> 
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script> 
+<link href='https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css' rel='stylesheet' /> 
+<link href='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css' rel='stylesheet' type='text/css' /> 
+<script async='true' crossorigin='anonymous' src='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css' rel='stylesheet' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css' rel='stylesheet' /> 
+<script src='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js'></script> 
+<link href='https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css' rel='stylesheet' /> 
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/' /> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js'></script> 
+ </head><body>
+   <page> 
+<nav class='wide'><img class='webbook-logo' src='logo/webbook-logo.svg' /> <div class='header'> <div class='header-left'><span class='header-lecture-grade'>RoManSy 
+</span><span class='header-lecture-name'>Scent-Based Landmark and Communication for EM Hostile Environments 
+</span><span class='header-webBook'>WebBook 2.1</span> </div> <div class='header-right'> <span class='header-version'>2026</span> 
+ </div></div> <div class='toc'><div class='toc-links'><a href='https://github.com/dTmC0945' title='Lecturer GitHub Repo'><i class='fab fa-github' style='font-size:20px'></i></a><a href='https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ' title='Lecturer Google Scholar Page'><i class='fa-brands fa-google-scholar' style='font-size:20px'></i></a><a href='https://www.researchgate.net/profile/Daniel-Mcguiness-2' title='Lecturer ResearchGate Account'><i class='fa-brands fa-researchgate' style='font-size:20px'></i></a></div><hr /><span class='sectionToc'><span class='number'>1</span><span class='title'><a href='Introduction.html#introduction'>Introduction</a></span></span><span class='sectionToc'><span class='number'>2</span><span class='title'><a href='#defining-the-physical-layer'>Defining the Physical Layer</a></span></span><span class='subsectionToc'><span class='number'>2.1</span><span class='title'><a href='#a-mathematical-model'>A Mathematical Model</a></span></span><span class='sectionToc'><span class='number'>3</span><span class='title'><a href='DefiningtheLandmark.html#defining-the-landmark'>Defining
+the Landmark</a></span></span><span class='subsectionToc'><span class='number'>3.1</span><span class='title'><a href='DefiningtheLandmark.html#operation-principle'>Operation Principle</a></span></span><span class='subsectionToc'><span class='number'>3.2</span><span class='title'><a href='DefiningtheLandmark.html#volatile-organic-compounds'>Volatile Organic Compounds</a></span></span><span class='subsectionToc'><span class='number'>3.3</span><span class='title'><a href='DefiningtheLandmark.html#detection-of-chemical-odour'>Detection of
+Chemical Odour</a></span></span><span class='subsectionToc'><span class='number'>3.4</span><span class='title'><a href='DefiningtheLandmark.html#chemical-quadrature-amplitude-modulation'>Chemical Quadrature Amplitude Modulation</a></span></span><span class='sectionToc'><span class='number'>4</span><span class='title'><a href='CommunicationTests.html#communication-tests'>Communication
+Tests</a></span></span><span class='sectionToc'><span class='number'>5</span><span class='title'><a href='ConclusionandFutureWork.html#conclusion-and-future-work'>Conclusion and Future Work</a></span></span>
+<!-- l. 52 --><p class='indent'>   </p><div class='nav-footer'><div class='nav-footer-left'><span class='nav-footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='nav-footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span></div></div><span class='nav-comments'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav> 
+
+<p></p>
+   <article class='chapter'> 
+<nav class='crosslinks-top'> <a href='DefiningtheLandmark.html'><span class='nav-next'>NEXT</span></a><a href='Introduction.html'><span class='nav-prev'>PREV</span></a><a href='Introduction.html#tailIntroduction.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='#tailDefiningthePhysicalLayer.html'><span class='nav-tail'>TAIL</span></a><a href='ConferencePaperMain.html#DefiningthePhysicalLayer.html'><span class='nav-up'>UP</span></a></nav> 
+<div class='section-header'> <h3 id='header-section-2'> <a class='pdf-icon' href='ConferencePaperMain.pdf'><svg class='bi bi-file-pdf' fill='currentColor' height='20' viewbox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z'></path><path d='M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z'></path></svg></a><span class='number'>2 </span><span class='title' id='defining-the-physical-layer'>  <a id='x3-20002'></a>Defining the Physical Layer</span></h3></div><p>
+   
+<!-- l. 54 --></p><p class='indent'>   </p><div class='subsection-header'> <h4 id='header-subsection-2.1'> <a class='pdf-icon' href='ConferencePaperMain.pdf'><svg class='bi bi-file-pdf' fill='currentColor' height='20' viewbox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z'></path><path d='M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z'></path></svg></a><span class='number'>2.1 </span><span class='title' id='a-mathematical-model'>  <a id='x3-30002.1'></a>A Mathematical Model</span></h4></div><p>
+</p><!-- l. 56 --><p class='indent'>   To understand how the landmarks behave, a mathematical model
+is required. To model the medium, the following assumptions were made
+to derive an analytical model: the environment has no advection (i.e.,
+<!-- l. 58 --><math display='inline'><mrow><mstyle mathvariant='bold'><mi>𝐯</mi></mstyle> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn></mrow></math>), The space
+in <!-- l. 58 --><math display='inline'><mrow><mi mathvariant='italic'>𝑥𝑦</mi></mrow></math>-axis
+have no boundaries, The system has no sink/source (i.e.,
+<!-- l. 59 --><math display='inline'><mrow><mi>K</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn></mrow></math>), The
+detector sensor has perfect absorption, and The diffusion constant. Under these
+conditions, the landmarks can be modeled using the diffusion equation <span class='cite'> [<a href='refname.html#Xcrank1979mathematics'>23</a>]</span>:
+</p><table class='equation-star'><tr><td>
+<!-- l. 63 --><math class='equation' display='block'><mrow>
+                     <msub><mrow><mi>c</mi></mrow><mrow><mi>t</mi></mrow></msub> <mo class='MathClass-rel' stretchy='false'>=</mo> <mi>D</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi mathvariant='italic'>𝑥𝑥</mi></mrow></msub> <mo class='MathClass-bin' stretchy='false'>+</mo> <msub><mrow><mi>c</mi></mrow><mrow><mi mathvariant='italic'>𝑦𝑦</mi></mrow></msub> <mo class='MathClass-bin' stretchy='false'>+</mo> <msub><mrow><mi>c</mi></mrow><mrow><mi mathvariant='italic'>𝑧𝑧</mi></mrow></msub></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-bin' stretchy='false'>+</mo> <mi>K</mi><mo class='MathClass-punc' stretchy='false'>,</mo>
+</mrow></math></td></tr></table>
+<!-- l. 67 --><p class='noindent'>where <!-- l. 67 --><math display='inline'><mi>c</mi></math> is the concentration
+of the mass (<!-- l. 67 --><math display='inline'><mrow><mstyle mathvariant='normal'><mi>kg</mi></mstyle><mspace class='thinspace' width='0.17em'></mspace><msup><mrow><mstyle mathvariant='normal'><mi>m</mi></mstyle></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>1</mn></mrow></msup></mrow></math>),
+<!-- l. 67 --><math display='inline'><mi>t</mi></math> is the mass transfer
+                                                                  
+
+                                                                  
+duration (<!-- l. 68 --><math display='inline'><mstyle mathvariant='normal'><mi>s</mi></mstyle></math>),
+<!-- l. 68 --><math display='inline'><mi>D</mi></math> is the diffusion
+coefficient (<!-- l. 69 --><math display='inline'><mrow><msup><mrow><mstyle mathvariant='normal'><mi>cm</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup><mspace class='thinspace' width='0.17em'></mspace><msup><mrow><mstyle mathvariant='normal'><mi>s</mi></mstyle></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><mn>1</mn></mrow></msup></mrow></math>),
+and <!-- l. 69 --><math display='inline'><mi>K</mi></math> is
+the sink and/or the source. The solution for this equation can be derived using the
+following initial boundary conditions, known as the “thin-film solution” in the
+literature <span class='cite'> [<a href='refname.html#Xcrank1979mathematics'>23</a>]</span>:
+</p><!-- l. 73 --><p class='indent'>
+</p><!-- tex4ht:inline --><!-- l. 77 --><math display='block'><mtable class='align-star' columnalign='left' displaystyle='true' rowlines='none' style=''>
+            <mtr><mtd class='align-odd' columnalign='right'><mi>c</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mo class='MathClass-rel' stretchy='false'>|</mo><mi>x</mi><mo class='MathClass-rel' stretchy='false'>|</mo> <mo class='MathClass-bin' stretchy='false'>⊳</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mo class='MathClass-rel' stretchy='false'>|</mo><mi>y</mi><mo class='MathClass-rel' stretchy='false'>|</mo> <mo class='MathClass-bin' stretchy='false'>⊳</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mo class='MathClass-rel' stretchy='false'>|</mo><mi>z</mi><mo class='MathClass-rel' stretchy='false'>|</mo> <mo class='MathClass-bin' stretchy='false'>⊳</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>t</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow><mo fence='true' form='postfix'>)</mo></mrow></mtd>                 <mtd class='align-even'> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace width='2em'></mspace></mtd>                        <mtd class='align-label' columnalign='right'></mtd>            <mtd class='align-label'>
+            <mspace width='2em'></mspace></mtd></mtr><mtr><mtd class='align-odd' columnalign='right'><mi>c</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mi>x</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>y</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>z</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>t</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow><mo fence='true' form='postfix'>)</mo></mrow></mtd>                  <mtd class='align-even'> <mo class='MathClass-rel' stretchy='false'>=</mo> <msub><mrow><mi>M</mi></mrow><mrow><mn>0</mn></mrow></msub><mspace class='thinspace' width='0.17em'></mspace><mi>δ</mi><mo class='MathClass-open' stretchy='false'>(</mo><mi>x</mi><mo class='MathClass-close' stretchy='false'>)</mo><mi>δ</mi><mo class='MathClass-open' stretchy='false'>(</mo><mi>y</mi><mo class='MathClass-close' stretchy='false'>)</mo><mi>δ</mi><mo class='MathClass-open' stretchy='false'>(</mo><mi>z</mi><mo class='MathClass-close' stretchy='false'>)</mo><mo class='MathClass-punc' stretchy='false'>,</mo><mspace width='2em'></mspace></mtd>            <mtd class='align-label' columnalign='right'></mtd>            <mtd class='align-label'>
+            <mspace width='2em'></mspace></mtd></mtr><mtr><mtd class='align-odd' columnalign='right'><mi>c</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mo class='MathClass-rel' stretchy='false'>|</mo><mi>x</mi><mo class='MathClass-rel' stretchy='false'>|</mo><mo class='MathClass-rel' stretchy='false'>→</mo><mi>∞</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mo class='MathClass-rel' stretchy='false'>|</mo><mi>y</mi><mo class='MathClass-rel' stretchy='false'>|</mo><mo class='MathClass-rel' stretchy='false'>→</mo><mi>∞</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mo class='MathClass-rel' stretchy='false'>|</mo><mi>z</mi><mo class='MathClass-rel' stretchy='false'>|</mo><mo class='MathClass-rel' stretchy='false'>→</mo><mi>∞</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow></mtd>            <mtd class='align-even'> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn><mo class='MathClass-punc' stretchy='false'>,</mo><mspace width='2em'></mspace></mtd>                        <mtd class='align-label' columnalign='right'></mtd>            <mtd class='align-label'>
+   <mspace width='2em'></mspace></mtd></mtr></mtable></math>
+<!-- l. 79 --><p class='noindent'>where <!-- l. 79 --><math display='inline'><msub><mrow><mi>M</mi></mrow><mrow><mn>0</mn></mrow></msub></math>
+is the initial mass injected into the environment
+(<!-- l. 79 --><math display='inline'><mstyle mathvariant='normal'><mi>kg</mi></mstyle></math>),
+<!-- l. 79 --><math display='inline'><mi>x</mi></math> is the Cartesian
+propagation dimension, <!-- l. 80 --><math display='inline'><msub><mrow><mi>t</mi></mrow><mrow><mn>0</mn></mrow></msub></math>
+is the initial time (<!-- l. 80 --><math display='inline'><mstyle mathvariant='normal'><mi>s</mi></mstyle></math>)
+and <!-- l. 81 --><math display='inline'><mrow><mi>δ</mi><mo class='MathClass-open' stretchy='false'>(</mo><mi>x</mi><mo class='MathClass-close' stretchy='false'>)</mo></mrow></math> is the
+one-dimensional Dirac delta function. Under these conditions, the solution with an unbounded
+domain in <!-- l. 82 --><math display='inline'><mrow><mi>x</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>y</mi></mrow></math> and
+a boundary at <!-- l. 82 --><math display='inline'><mrow><mi>z</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn></mrow></math>,
+can be expressed as follows:
+                                                                  
+
+                                                                  
+</p><!-- tex4ht:inline --><!-- l. 90 --><math display='block'><mtable class='align' columnalign='left' displaystyle='true' rowlines='' style=''>
+      <mtr><mtd class='align-odd' columnalign='right'><mi>C</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mi>x</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>y</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>z</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-rel' stretchy='false'>=</mo>           <mfrac><mrow><mi>M</mi></mrow> 
+<mrow><msqrt><mrow><msup><mrow><mrow><mo fence='true' form='prefix'>(</mo><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>D</mi></mrow><mrow><mi>x</mi> </mrow> </msub> <msub><mrow><mi>D</mi></mrow><mrow><mi>y</mi> </mrow> </msub> <msub><mrow><mi>D</mi></mrow><mrow><mi>z</mi> </mrow> </msub> <mi>t</mi> </mrow><mo fence='true' form='postfix'>)</mo></mrow> </mrow><mrow><mn>3</mn></mrow></msup></mrow></msqrt></mrow></mfrac> <mi class='loglike'>exp</mi><mo>⁡<!-- FUNCTION APPLICATION --></mo><!-- nolimits --> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mo class='MathClass-bin' stretchy='false'>−</mo> <mfrac><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>x</mi></mrow></msub><mi>t</mi></mrow></mfrac> <mo class='MathClass-bin' stretchy='false'>−</mo> <mfrac><mrow><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow> 
+<mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>y</mi></mrow></msub><mi>t</mi></mrow></mfrac> <mo class='MathClass-bin' stretchy='false'>−</mo> <mfrac><mrow><msup><mrow><mi>z</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow> 
+<mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>z</mi></mrow></msub><mi>t</mi></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow></mtd>      <mtd class='align-even'><mspace width='2em'></mspace></mtd>      <mtd class='align-label' columnalign='right'><mstyle class='label' id='x3-3001r1'></mstyle><!-- endlabel --><mstyle class='maketag'><mtext>(1)</mtext></mstyle><mspace class='nbsp' width='0.33em'></mspace>
+   </mtd></mtr></mtable></math>
+<!-- l. 92 --><p class='noindent'>The diffusion coefficient (<!-- l. 92 --><math display='inline'><mi>D</mi></math>),
+based on environment can be estimated as <span class='cite'> [<a href='refname.html#Xjeans1982introduction'>24</a>]</span>; </p><table class='equation-star'><tr><td>
+<!-- l. 94 --><math class='equation' display='block'><mrow>
+              <mi>D</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mfrac><mrow><mn>2</mn></mrow> 
+<mrow><mn>3</mn></mrow></mfrac><msqrt><mrow><mfrac><mrow><msubsup><mrow><mi>k</mi></mrow><mrow><mi>B</mi> </mrow> <mrow>  <mn>3</mn> </mrow> </msubsup><msup><mrow><mi>T</mi></mrow><mrow><mn>3</mn> </mrow> </msup> </mrow>
+   <mrow><msup><mrow><mi>π</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfrac></mrow></msqrt>    <msqrt><mrow> <mfrac> <mrow> <mn>1</mn></mrow>
+<mrow><mn>2</mn><msub><mrow><mi>m</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow></mfrac> <mo class='MathClass-bin' stretchy='false'>+</mo>   <mfrac><mrow><mn>1</mn></mrow> 
+<mrow><mn>2</mn><msub><mrow><mi>m</mi></mrow><mrow><mi>B</mi></mrow></msub></mrow></mfrac></mrow></msqrt>         <mfrac><mrow><mn>4</mn></mrow> 
+<mrow><mi>P</mi><msup><mrow><mo class='MathClass-open' stretchy='false'>(</mo><msub><mrow><mi>d</mi></mrow><mrow><mi>A</mi></mrow></msub> <mo class='MathClass-bin' stretchy='false'>+</mo> <msub><mrow><mi>d</mi></mrow><mrow><mi>B</mi></mrow></msub><mo class='MathClass-close' stretchy='false'>)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo class='MathClass-punc' stretchy='false'>,</mo>
+</mrow></math></td></tr></table>
+<!-- l. 102 --><p class='noindent'>where <!-- l. 102 --><math display='inline'><msub><mrow><mi>k</mi></mrow><mrow><mi>B</mi></mrow></msub></math> is the
+Boltzmann constant<span class='footnote-mark'><a href='ConclusionandFutureWork.html#fn1x0' id='fn1x0-bk'><sup class='textsuperscript'>1</sup></a></span>, <!-- l. 102 --><math display='inline'><mi>P</mi></math>
+is pressure, <!-- l. 102 --><math display='inline'><mi>T</mi></math> is
+temperature, <!-- l. 103 --><math display='inline'><mrow><msub><mrow><mi>m</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>m</mi></mrow><mrow><mi>B</mi></mrow></msub></mrow></math>
+and <!-- l. 103 --><math display='inline'><mrow><msub><mrow><mi>d</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>d</mi></mrow><mrow><mi>B</mi></mrow></msub></mrow></math>
+are the molecular masses and diameters of chemical A and B respectively.
+Eq. (<a href='#x3-3001r1'>1<!-- tex4ht:ref: eq:concentration  --></a>) quantifies the concentration value of the sample in a given time
+(<!-- l. 105 --><math display='inline'><mi>t</mi></math>) and 3D space
+(<!-- l. 105 --><math display='inline'><mrow><mi>x</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>y</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>z</mi></mrow></math>). The measured mass
+in a given detection (<!-- l. 106 --><math display='inline'><mi>𝜃</mi></math>)
+can be calculated by integrating the concentration function in the desired volume:
+</p><table class='equation-star'><tr><td>
+                                                                  
+
+                                                                  
+<!-- l. 109 --><math class='equation' display='block'><mrow>
+                          <mi>𝜃</mi> <mo class='MathClass-rel' stretchy='false'>=</mo><mo> ∫
+ <!-- nolimits --></mo><!-- nolimits --><mi>C</mi><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑥</mi><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑦</mi><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑧</mi><mo class='MathClass-punc' stretchy='false'>.</mo>
+</mrow></math></td></tr></table>
+<!-- l. 113 --><p class='indent'>   As mentioned, the system has no sink/source and therefore,
+the chemicals used in the transmission can either be in motion
+(<!-- l. 114 --><math display='inline'><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>T</mi></mrow></msub></math>) or have been absorbed
+by the detector (<!-- l. 115 --><math display='inline'><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub></math>).
+Therefore, both mass values must add up to the initial mass in the beginning of the
+transmission. </p><table class='equation-star'><tr><td>
+<!-- l. 118 --><math class='equation' display='block'><mrow>
+                 <mi>M</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <msub><mrow><mi>𝜃</mi></mrow><mrow><mi>T</mi></mrow></msub> <mo class='MathClass-bin' stretchy='false'>+</mo> <msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='qquad' width='2em'></mspace><mstyle class='text'><mtext>therefore</mtext></mstyle><mspace class='qquad' width='2em'></mspace><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub> <mo class='MathClass-rel' stretchy='false'>=</mo> <mi>M</mi> <mo class='MathClass-bin' stretchy='false'>−</mo> <msub><mrow><mi>𝜃</mi></mrow><mrow><mi>T</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>.</mo>
+</mrow></math></td></tr></table>
+<!-- l. 124 --><p class='indent'>   By integrating the concentration function with respect to space, the particles
+present in the environment can be calculated. To calculate chemicals absorbed by the
+detector, the integration function is subtracted from the injected mass <span class='cite'> [<a href='refname.html#Xwang2014performance'>25</a>, <a href='refname.html#Xmcguiness2018experimental'>26</a>, <a href='refname.html#Xmcguiness2018parameter'>27</a>]</span>:
+</p><table class='equation'><tr><td>
+<!-- l. 129 --><math class='equation' display='block'><mrow>
+          <mstyle class='label' id='x3-3002r2'></mstyle><!-- endlabel --><mi>𝜃</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mi>x</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>y</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>z</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-rel' stretchy='false'>=</mo> <mi>M</mi> <mo class='MathClass-bin' stretchy='false'>−</mo><munderover accent='false' accentunder='false'><mrow><mtext>∭</mtext></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>𝜖</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mo class='MathClass-bin' stretchy='false'>−</mo><msub><mrow><mi>y</mi></mrow><mrow><mi>𝜖</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mn>0</mn></mrow><mrow><mo class='MathClass-bin' stretchy='false'>+</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>y</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>z</mi></mrow><mrow><mi>d</mi></mrow></msub>
+                         </mrow></munderover><mi>C</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mi>x</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>y</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>z</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑥</mi><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑦</mi><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑧</mi><mo class='MathClass-punc' stretchy='false'>.</mo>
+</mrow></math></td><td class='eq-no'>(2)</td></tr></table>
+<!-- l. 133 --><p class='noindent'>where subscript <!-- l. 135 --><math display='inline'><mi>d</mi></math>
+defines distance from the detector to the origin point and
+<!-- l. 135 --><math display='inline'><mi>𝜖</mi></math> is the
+                                                                  
+
+                                                                  
+distance particles travel against the flow<span class='footnote-mark'><a href='ConclusionandFutureWork.html#fn2x0' id='fn2x0-bk'><sup class='textsuperscript'>2</sup></a></span>. The solution to the integration given in
+Eq. (<a href='#x3-3002r2'>2<!-- tex4ht:ref: eq:absorbed_initial  --></a>) for transmission with boundaries is given in Eq. (<a href='#x3-3003r3'>3<!-- tex4ht:ref: eq:absorbed_final  --></a>).
+</p><!-- tex4ht:inline --><!-- l. 143 --><math display='block'><mtable class='align' columnalign='left' displaystyle='true' rowlines='' style=''>
+        <mtr><mtd class='align-odd' columnalign='right'></mtd>        <mtd class='align-even'><msub><mrow><mi>𝜃</mi></mrow><mrow><mn>1</mn></mrow></msub> <mrow><mo fence='true' form='prefix'>(</mo><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>x</mi></mrow><mrow><mi>𝜖</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><msub><mrow><mi>y</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>y</mi></mrow><mrow><mi>𝜖</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-rel' stretchy='false'>=</mo> <mi>M</mi> <mo class='MathClass-bin' stretchy='false'>−</mo><mfrac><mrow> <mi>M</mi></mrow> 
+ <mrow><mn>4</mn></mrow></mfrac>  <mrow><mo fence='true' form='prefix'>[</mo><mrow><mi mathvariant='italic'>𝑒𝑟𝑓</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mfrac><mrow>  <msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><mi mathvariant='italic'>𝐷𝑡</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-bin' stretchy='false'>+</mo> <mi mathvariant='italic'>𝑒𝑟𝑓</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mfrac><mrow>  <msub><mrow><mi>x</mi></mrow><mrow><mi>𝜖</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><mi mathvariant='italic'>𝐷𝑡</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow></mrow><mo fence='true' form='postfix'>]</mo></mrow><mspace width='2em'></mspace></mtd>        <mtd class='align-label' columnalign='right'></mtd>        <mtd class='align-label'>
+        <mspace width='2em'></mspace></mtd></mtr><mtr><mtd class='align-odd' columnalign='right'></mtd>        <mtd class='align-even'> <mo class='MathClass-bin' stretchy='false'>×</mo><mrow><mo fence='true' form='prefix'>[</mo><mrow><mi mathvariant='italic'>𝑒𝑟𝑓</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mfrac><mrow>  <msub><mrow><mi>y</mi></mrow><mrow><mi>d</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><mi mathvariant='italic'>𝐷𝑡</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-bin' stretchy='false'>+</mo> <mi mathvariant='italic'>𝑒𝑟𝑓</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mfrac><mrow>  <msub><mrow><mi>y</mi></mrow><mrow><mi>𝜖</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><mi mathvariant='italic'>𝐷𝑡</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow></mrow><mo fence='true' form='postfix'>]</mo></mrow> <mrow><mo fence='true' form='prefix'>[</mo><mrow><mi mathvariant='italic'>𝑒𝑟𝑓</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mfrac><mrow>  <msub><mrow><mi>z</mi></mrow><mrow><mi>d</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><mi mathvariant='italic'>𝐷𝑡</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow></mrow><mo fence='true' form='postfix'>]</mo></mrow><mspace width='2em'></mspace></mtd>                           <mtd class='align-label' columnalign='right'><mstyle class='label' id='x3-3003r3'></mstyle><!-- endlabel --><mstyle class='maketag'><mtext>(3)</mtext></mstyle><mspace class='nbsp' width='0.33em'></mspace>
+   </mtd></mtr></mtable></math>
+<!-- l. 145 --><p class='noindent'>where <!-- l. 145 --><math display='inline'><mrow><mstyle mathvariant='normal'><mi>erf</mi></mstyle> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mi>x</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>2</mn><mo class='MathClass-bin' stretchy='false'>∕</mo><msqrt><mrow><mi>π</mi></mrow></msqrt><msubsup><mrow><mo>∫</mo>
+ <!-- nolimits --><!-- nolimits --></mrow><mrow><mn>0</mn></mrow><mrow><mi>x</mi></mrow></msubsup><msup><mrow><mi>e</mi></mrow><mrow><mo class='MathClass-bin' stretchy='false'>−</mo><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup>
+      </mrow></msup><mspace class='thinspace' width='0.17em'></mspace><mi mathvariant='italic'>𝑑𝑡</mi></mrow></math>. The chemicals
+absorbed by the detector (<!-- l. 146 --><math display='inline'><msub><mrow><mi>𝜃</mi></mrow><mrow><mn>1</mn></mrow></msub></math>)
+in a given period of <!-- l. 146 --><math display='inline'><mi>T</mi></math>
+is given below: </p><table class='equation-star'><tr><td>
+<!-- l. 148 --><math class='equation' display='block'><mrow>
+                  <msub><mrow><mi>M</mi></mrow><mrow><mi>R</mi></mrow></msub> <mo class='MathClass-rel' stretchy='false'>=</mo> <msub><mrow><mi>𝜃</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class='MathClass-open' stretchy='false'>(</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mi>T</mi><mo class='MathClass-close' stretchy='false'>)</mo> <mo class='MathClass-bin' stretchy='false'>−</mo> <msub><mrow><mi>𝜃</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class='MathClass-open' stretchy='false'>(</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi> <mo class='MathClass-rel' stretchy='false'>=</mo> <mn>0</mn><mo class='MathClass-close' stretchy='false'>)</mo><mo class='MathClass-punc' stretchy='false'>.</mo>
+</mrow></math></td></tr></table>
+<!-- l. 152 --><p class='indent'>   Therefore, the removal of chemicals from the detector
+(<!-- l. 152 --><math display='inline'><msub><mrow><mi>𝜃</mi></mrow><mrow><mn>0</mn></mrow></msub></math>) to
+the outside environment can be expressed by the following expression.
+                                                                  
+
+                                                                  
+</p><!-- tex4ht:inline --><!-- l. 165 --><math display='block'><mtable class='align' columnalign='left' displaystyle='true' rowlines='' style=''>
+         <mtr><mtd class='align-odd' columnalign='right'></mtd>         <mtd class='align-even'><msub><mrow><mi>𝜃</mi></mrow><mrow><mn>0</mn></mrow></msub> <mrow><mo fence='true' form='prefix'>(</mo><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>x</mi></mrow><mrow><mi>𝜖</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>y</mi></mrow><mrow><mi>d</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msub><mrow><mi>y</mi></mrow><mrow><mi>𝜖</mi></mrow></msub><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><mi>t</mi></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-rel' stretchy='false'>=</mo> <mfrac><mrow><msub><mrow><mi>M</mi></mrow><mrow><mi>R</mi></mrow></msub></mrow> 
+  <mrow><mn>4</mn></mrow></mfrac>   <mrow><mo fence='true' form='prefix'>[</mo><mrow><mstyle mathvariant='normal'><mi>erf</mi></mstyle> <mrow><mo fence='true' form='prefix'>(</mo><mrow>   <mfrac><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>d</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>x</mi> </mrow> </msub> <mi>t</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-bin' stretchy='false'>+</mo> <mstyle mathvariant='normal'><mi>erf</mi></mstyle> <mrow><mo fence='true' form='prefix'>(</mo><mrow>    <mfrac><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>𝜖</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>x</mi> </mrow> </msub> <mi>t</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow></mrow><mo fence='true' form='postfix'>]</mo></mrow><mspace width='2em'></mspace></mtd>         <mtd class='align-label' columnalign='right'></mtd>         <mtd class='align-label'>
+         <mspace width='2em'></mspace></mtd></mtr><mtr><mtd class='align-odd' columnalign='right'></mtd>         <mtd class='align-even'> <mo class='MathClass-bin' stretchy='false'>×</mo><mrow><mo fence='true' form='prefix'>[</mo><mrow><mstyle mathvariant='normal'><mi>erf</mi></mstyle> <mrow><mo fence='true' form='prefix'>(</mo><mrow>    <mfrac><mrow><msub><mrow><mi>y</mi></mrow><mrow><mi>d</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>y</mi> </mrow> </msub> <mi>t</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-bin' stretchy='false'>+</mo> <mstyle mathvariant='normal'><mi>erf</mi></mstyle> <mrow><mo fence='true' form='prefix'>(</mo><mrow>    <mfrac><mrow><msub><mrow><mi>y</mi></mrow><mrow><mi>𝜖</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><msub><mrow><mi>D</mi></mrow><mrow><mi>y</mi> </mrow> </msub> <mi>t</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow></mrow><mo fence='true' form='postfix'>]</mo></mrow><mi mathvariant='italic'>𝑒𝑟𝑓</mi> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mfrac><mrow>  <msub><mrow><mi>z</mi></mrow><mrow><mi>d</mi></mrow></msub></mrow>
+<mrow><msqrt><mrow><mn>4</mn><mi mathvariant='italic'>𝐷𝑡</mi></mrow></msqrt></mrow></mfrac> </mrow><mo fence='true' form='postfix'>)</mo></mrow><mo class='MathClass-punc' stretchy='false'>.</mo><mspace width='2em'></mspace></mtd>                         <mtd class='align-label' columnalign='right'><mstyle class='label' id='x3-3004r4'></mstyle><!-- endlabel --><mstyle class='maketag'><mtext>(4)</mtext></mstyle><mspace class='nbsp' width='0.33em'></mspace>
+   </mtd></mtr></mtable></math>
+<!-- l. 167 --><p class='noindent'>As can be seen from Eq. (<a href='#x3-3003r3'>3<!-- tex4ht:ref: eq:absorbed_final  --></a>) and Eq. (<a href='#x3-3004r4'>4<!-- tex4ht:ref: eq:removed_final  --></a>), the mass parameter is different
+in each equation: former being the mass injected into the environment
+(<!-- l. 169 --><math display='inline'><mi>M</mi></math>)
+and the latter is the mass absorbed by the detector
+(<!-- l. 169 --><math display='inline'><msub><mrow><mi>M</mi></mrow><mrow><mi>R</mi></mrow></msub></math>).
+The application and the process of introduction/removal of particles in 1D can be
+seen in detail in <span class='cite'> [<a href='refname.html#Xmcguiness2018parameter'>27</a>, <a href='refname.html#Xmcguiness2018experimental'>26</a>]</span>.
+   
+</p>
+<!-- l. 173 --><p class='noindent'><span class='paragraphHead' id='environmental-noise'> <a id='x3-4000'></a><span class='cmbx-10'>Environmental Noise</span></span>
+   To properly model the limits on information, and understanding of the
+environmental noise is required. Based on experiments done in <span class='cite'> [<a href='refname.html#Xmcguiness2018experimental'>26</a>]</span> it was
+determined to be an Additive White Gaussian Noise (AWGN) and therefore will be
+used in the modelling: </p><table class='equation-star'><tr><td>
+<!-- l. 179 --><math class='equation' display='block'><mrow>
+                         <mstyle class='text'><mtext class='textrm' mathvariant='normal'>AWGN</mtext></mstyle> <mo class='MathClass-rel' stretchy='false'>=</mo> <mstyle mathvariant='script'><mi>𝒩</mi></mstyle> <mrow><mo fence='true' form='prefix'>(</mo><mrow><mi>μ</mi><mo class='MathClass-punc' stretchy='false'>,</mo><mspace class='thinspace' width='0.17em'></mspace><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo fence='true' form='postfix'>)</mo></mrow> <mo class='MathClass-punc' stretchy='false'>.</mo>
+</mrow></math></td></tr></table>
+                                                                  
+
+                                                                  
+   <div class='crosslinks-bottom'><a href='DefiningtheLandmark.html'><span class='nav-next'>NEXT</span></a><a href='Introduction.html'><span class='nav-prev'>PREV</span></a><a href='Introduction.html#tailIntroduction.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='DefiningthePhysicalLayer.html'><span class='nav-front'>FRONT</span></a><a href='ConferencePaperMain.html#DefiningthePhysicalLayer.html'><span class='nav-up'>UP</span></a><a id='tailDefiningthePhysicalLayer.html'></a>   </div> <div class='footer'> <div class='footer-left'><span class='footer-lecture'>Daniel T. McGuiness, Ph.D 
+</span><span class='footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span> </div> </div> 
+<div class='author-notes'> 
+<span class='note'>Authors Note  
+</span><span class='text'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span> 
+</div> 
+</article> 
+<div class='mode-line'> 
+<div class='core-line'> 
+<div class='button-group'> 
+</div> 
+</div> 
+<div class='supp-line'></div> 
+</div> 
+</page> 
+ 
+</body> 
+</html>

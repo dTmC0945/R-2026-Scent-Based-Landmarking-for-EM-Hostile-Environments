@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><title>References</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="ConferencePaperMain.css" rel="stylesheet" type="text/css"/>
+<meta content="ConferencePaperMain.tex" name="src"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<meta state="paper"/>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet/"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+</head><body>
+<page>
+<nav class="wide"><img class="webbook-logo" src="logo/webbook-logo.svg"/> <div class="header"> <div class="header-left"><span class="header-lecture-grade">RoManSy 
+</span><span class="header-lecture-name">Scent-Based Landmark and Communication for EM Hostile Environments 
+</span><span class="header-webBook">WebBook 2.1</span> </div> <div class="header-right"> <span class="header-version">2026</span>
+</div></div> <div class="toc"><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a></div><hr/><span class="sectionToc"><span class="number">1</span><span class="title"><a href="Introduction.html#introduction">Introduction</a></span></span><span class="sectionToc"><span class="number">2</span><span class="title"><a href="DefiningthePhysicalLayer.html#defining-the-physical-layer">Defining the Physical Layer</a></span></span><span class="subsectionToc"><span class="number">2.1</span><span class="title"><a href="DefiningthePhysicalLayer.html#a-mathematical-model">A Mathematical Model</a></span></span><span class="sectionToc"><span class="number">3</span><span class="title"><a href="DefiningtheLandmark.html#defining-the-landmark">Defining
+the Landmark</a></span></span><span class="subsectionToc"><span class="number">3.1</span><span class="title"><a href="DefiningtheLandmark.html#operation-principle">Operation Principle</a></span></span><span class="subsectionToc"><span class="number">3.2</span><span class="title"><a href="DefiningtheLandmark.html#volatile-organic-compounds">Volatile Organic Compounds</a></span></span><span class="subsectionToc"><span class="number">3.3</span><span class="title"><a href="DefiningtheLandmark.html#detection-of-chemical-odour">Detection of
+Chemical Odour</a></span></span><span class="subsectionToc"><span class="number">3.4</span><span class="title"><a href="DefiningtheLandmark.html#chemical-quadrature-amplitude-modulation">Chemical Quadrature Amplitude Modulation</a></span></span><span class="sectionToc"><span class="number">4</span><span class="title"><a href="CommunicationTests.html#communication-tests">Communication
+Tests</a></span></span><span class="sectionToc"><span class="number">5</span><span class="title"><a href="ConclusionandFutureWork.html#conclusion-and-future-work">Conclusion and Future Work</a></span></span>
+<!-- l. 1 --><p class="indent"> </p><div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">Daniel T. McGuiness, Ph.D 
+</span><span class="nav-footer-webBook"><span class="cmbx-10">Last Updated: </span>10.9.2026, at 11:17.</span></div></div><span class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav>
+<p></p>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-inactive"><span class="nav-next">NEXT</span></span> <a href="ConclusionandFutureWork.html"><span class="nav-prev">PREV</span></a><a href="ConclusionandFutureWork.html#tailConclusionandFutureWork.html"><span class="nav-prev-tail">PREV-TAIL</span></a><a href="#tailrefname.html"><span class="nav-tail">TAIL</span></a><a href="ConferencePaperMain.html#refname.html"><span class="nav-up">UP</span></a></nav>
+<div class="section-header"><div class="title"><h3 class="likesectionHead" id="references"> <a id="x7-14000"></a>References</h3></div></div>
+<!-- l. 1 --><p class="noindent">
+</p><section class="thebibliography" role="doc-bibliography"><dl><dt>
+<span class="cmr-9">1.</span> </dt><dd><a id="Xgalceran2013survey"></a><span class="cmr-9">E. Galceran and M. Carreras, “A survey on coverage path planning for robotics,”
+   </span><span class="cmti-9">Robotics and Autonomous systems</span><span class="cmr-9">, vol. 61, no. 12, pp. 1258–1276, 2013.</span>
+</dd><dt>
+<span class="cmr-9">2.</span> </dt><dd><a id="Xwalsh2018communications"></a><span class="cmr-9">W. Walsh and J. Gao, “Communications in a cave environment,” in </span><span class="cmti-9">2018 IEEE
+   Aerospace Conference</span><span class="cmr-9">, pp. 1–8, IEEE, 2018.</span>
+</dd><dt>
+<span class="cmr-9">3.</span> </dt><dd><a id="Xyavuz2009cave"></a><span class="cmr-9">A. G. Yavuz, Z. C. Taysi, and E. Celik, “In-cave wireless communication system,”
+   in </span><span class="cmti-9">2009 Third International Conference on Next Generation Mobile Applications,
+   Services and Technologies</span><span class="cmr-9">, pp. 161–164, IEEE, 2009.</span>
+</dd><dt>
+<span class="cmr-9">4.</span> </dt><dd><a id="Xbedford2019modeling"></a><span class="cmr-9">M. D. Bedford, A. Hrovat, G. Kennedy, T. Javornik, and P. Foster, “Modeling
+   microwave  propagation  in  natural  caves  using  lidar  and  ray  tracing,”  </span><span class="cmti-9">IEEE
+   Transactions on Antennas and Propagation</span><span class="cmr-9">, vol. 68, no. 5, pp. 3878–3888, 2019.</span>
+</dd><dt>
+<span class="cmr-9">5.</span> </dt><dd><a id="Xrak2007uhf"></a><span class="cmr-9">M. Rak and P. Pechac, “Uhf propagation in caves and subterranean galleries,”
+   </span><span class="cmti-9">IEEE Transactions on antennas and propagation</span><span class="cmr-9">, vol. 55, no. 4, pp. 1134–1138,
+   2007.</span>
+</dd><dt>
+<span class="cmr-9">6.</span> </dt><dd><a id="Xsoo2018propagation"></a><span class="cmr-9">Q. P. Soo, S. Y. Lim, D. W. G. Lim, K. M. Yap, and S. L. Lau, “Propagation
+   measurement of a natural cave-turned-wine-cellar,” </span><span class="cmti-9">IEEE Antennas and Wireless
+   Propagation Letters</span><span class="cmr-9">, vol. 17, no. 5, pp. 743–746, 2018.</span>
+</dd><dt>
+<span class="cmr-9">7.</span> </dt><dd><a id="Xschwaiger2024semi"></a><span class="cmr-9">S. Schwaiger, L. Muster, G. Novotny, M. Schebek, W. Wöber, S. Thalhammer,
+   and C. Böhm, “Semi-autonomous mobile search and rescue robot for radiation
+   disaster scenarios,” </span><span class="cmti-9">arXiv e-prints</span><span class="cmr-9">, pp. arXiv–2406, 2024.</span>
+</dd><dt>
+<span class="cmr-9">8.</span> </dt><dd><a id="Xrooker2007multi"></a><span class="cmr-9">M. N.  Rooker  and  A. Birk,  “Multi-robot  exploration  under  the  constraints  of
+   wireless networking,” </span><span class="cmti-9">Control Engineering Practice</span><span class="cmr-9">, vol. 15, no. 4, pp. 435–445,
+   2007.</span>
+</dd><dt>
+<span class="cmr-9">9.</span> </dt><dd><a id="Xmurphy2008search"></a><span class="cmr-9">R. R.  Murphy,  S. Tadokoro,  D. Nardi,  A. Jacoff,  P. Fiorini,  H. Choset,  and
+   A. M. Erkmen, “Search and rescue robotics,” in </span><span class="cmti-9">Springer handbook of robotics</span><span class="cmr-9">,
+   pp. 1151–1173, Springer, 2008.</span>
+</dd><dt>
+<span class="cmr-9">10.</span> </dt><dd><a id="Xnguyen2004maintaining"></a><span class="cmr-9">H. G.  Nguyen,  N. Pezeshkian,  A. Gupta,  and  N. Farrington,  “Maintaining
+   communication link for a robot operating in a hazardous environment,” 2004.</span>
+</dd><dt>
+<span class="cmr-9">11.</span> </dt><dd><a id="Xjensen2019effects"></a><span class="cmr-9">E. A.  Jensen  and  M. Gini,  “Effects  of  communication  restriction  on  online
+   multi-robot  exploration  in  bounded  environments,”  in  </span><span class="cmti-9">Distributed Autonomous
+   Robotic Systems: The 14th International Symposium</span><span class="cmr-9">, pp. 469–483, Springer, 2019.</span>
+</dd><dt>
+<span class="cmr-9">12.</span> </dt><dd><a id="Xbrass2011multirobot"></a><span class="cmr-9">P. Brass, F. Cabrera-Mora, A. Gasparri, and J. Xiao, “Multirobot tree and graph
+   exploration,” </span><span class="cmti-9">IEEE Transactions on Robotics</span><span class="cmr-9">, vol. 27, no. 4, pp. 707–717, 2011.</span>
+</dd><dt>
+<span class="cmr-9">13.</span> </dt><dd><a id="Xjensen2013rolling"></a><span class="cmr-9">E. A. Jensen and M. L. Gini, “Rolling dispersion for robot teams.,” in </span><span class="cmti-9">IJCAI</span><span class="cmr-9">,
+   pp. 2473–2479, 2013.</span>
+</dd><dt>
+<span class="cmr-9">14.</span> </dt><dd><a id="Xmoreira2020new"></a><span class="cmr-9">A. P.  Moreira,  P. Costa,  and  J. Lima,  “New  approach  for  beacons  based
+   mobile robot localization using kalman filters,” </span><span class="cmti-9">Procedia Manufacturing</span><span class="cmr-9">, vol. 51,
+   pp. 512–519, 2020.</span>
+</dd><dt>
+<span class="cmr-9">15.</span> </dt><dd><a id="Xmamei2007pervasive"></a><span class="cmr-9">M. Mamei and F. Zambonelli, “Pervasive pheromone-based interaction with rfid
+   tags,” </span><span class="cmti-9">ACM Transactions on Autonomous and Adaptive Systems (TAAS)</span><span class="cmr-9">, vol. 2,
+   no. 2, pp. 4–es, 2007.</span>
+</dd><dt>
+<span class="cmr-9">16.</span> </dt><dd><a id="Xchen2019odor"></a><span class="cmr-9">X.-x. Chen and J. Huang, “Odor source localization algorithms on mobile robots:
+   A  review  and  future  outlook,”  </span><span class="cmti-9">Robotics  and  Autonomous  Systems</span><span class="cmr-9">,  vol. 112,
+   pp. 123–136, 2019.</span>
+</dd><dt>
+<span class="cmr-9">17.</span> </dt><dd><a id="Xjing2021recent"></a><span class="cmr-9">T. Jing, Q.-H. Meng, and H. Ishida, “Recent progress and trend of robot odor
+   source localization,” </span><span class="cmti-9">IEEJ Transactions on Electrical and Electronic Engineering</span><span class="cmr-9">,
+   vol. 16, no. 7, pp. 938–953, 2021.</span>
+</dd><dt>
+<span class="cmr-9">18.</span> </dt><dd><a id="Xwang2022odor"></a><span class="cmr-9">J. Wang, Y. Lin, R. Liu, and J. Fu, “Odor source localization of multi-robots
+   with swarm intelligence algorithms: A review,” </span><span class="cmti-9">Frontiers in Neurorobotics</span><span class="cmr-9">, vol. 16,
+   p. 949888, 2022.</span>
+</dd><dt>
+<span class="cmr-9">19.</span> </dt><dd><a id="Xfrancis2022gas"></a><span class="cmr-9">A. Francis,  S. Li,  C. Griffiths,  and  J. Sienz,  “Gas  source  localization  and
+   mapping with mobile robots: A review,” </span><span class="cmti-9">Journal of Field Robotics</span><span class="cmr-9">, vol. 39, no. 8,
+   pp. 1341–1373, 2022.</span>
+</dd><dt>
+<span class="cmr-9">20.</span> </dt><dd><a id="Xgaurav2024moth"></a><span class="cmr-9">K. Gaurav   and   P. Ranjan,   “Moth-inspired   odor   source   localization   using
+   robotic platforms: a comprehensive review,” </span><span class="cmti-9">Adaptive Behavior</span><span class="cmr-9">, vol. 32, no. 4,
+   pp. 345–369, 2024.</span>
+</dd><dt>
+<span class="cmr-9">21.</span> </dt><dd><a id="Xjain2025review"></a><span class="cmr-9">U. Jain, V. Kansal, S. Kumari, R. K. Dewangan, K. Mishra, and A. Saroj, “A
+   review of the evolution of mobile robot odor source localization methods,” </span><span class="cmti-9">Discover
+   Computing</span><span class="cmr-9">, vol. 28, no. 1, p. 44, 2025.</span>
+</dd><dt>
+<span class="cmr-9">22.</span> </dt><dd><a id="Xfarsad2016comprehensive"></a><span class="cmr-9">N. Farsad,   H. B.   Yilmaz,   A. Eckford,   C.-B.   Chae,   and   W. Guo,   “A
+   comprehensive survey of recent advancements in molecular communication,” </span><span class="cmti-9">IEEE
+   Communications Surveys &amp;Tutorials</span><span class="cmr-9">, vol. 18, no. 3, pp. 1887–1919, 2016.</span>
+</dd><dt>
+<span class="cmr-9">23.</span> </dt><dd><a id="Xcrank1979mathematics"></a><span class="cmr-9">J. Crank, </span><span class="cmti-9">The mathematics of diffusion</span><span class="cmr-9">. Oxford university press, 1979.</span>
+</dd><dt>
+<span class="cmr-9">24.</span> </dt><dd><a id="Xjeans1982introduction"></a><span class="cmr-9">J. Jeans and J. H. Jeans, </span><span class="cmti-9">An introduction to the kinetic theory of gases</span><span class="cmr-9">.  CUP
+   Archive, 1982.</span>
+</dd><dt>
+<span class="cmr-9">25.</span> </dt><dd><a id="Xwang2014performance"></a><span class="cmr-9">S. Wang, W. Guo, S. Qiu, and M. D. McDonnell, “Performance of Macro-scale
+   Molecular  Communications  with  Sensor  Cleanse  Time,”  in  </span><span class="cmti-9">21st  International
+   Conference on Telecommunications (ICT)</span><span class="cmr-9">, pp. 363–368, IEEE, 2014.</span>
+</dd><dt>
+<span class="cmr-9">26.</span> </dt><dd><a id="Xmcguiness2018experimental"></a><span class="cmr-9">D. T.  McGuiness,  S. Giannoukos,  A. Marshall,  and  S. Taylor,  “Experimental
+   results  on  the  open-air  transmission  of  macro-molecular  communication  using
+   membrane  inlet  mass  spectrometry,”  </span><span class="cmti-9">IEEE  Communications  Letters</span><span class="cmr-9">,  vol. 22,
+   no. 12, pp. 2567–2570, 2018.</span>
+</dd><dt>
+<span class="cmr-9">27.</span> </dt><dd><a id="Xmcguiness2018parameter"></a><span class="cmr-9">D. T.  McGuiness,  S. Giannoukos,  A. Marshall,  and  S. Taylor,  “Parameter
+   Analysis in Macro-scale Molecular Communications using Advection-Diffusion,”
+   </span><span class="cmti-9">IEEE Access</span><span class="cmr-9">, vol. 6, pp. 46706–46717, 2018.</span>
+</dd><dt>
+<span class="cmr-9">28.</span> </dt><dd><a id="Xde2014volatile"></a><span class="cmr-9">C. De Biase,  S. Loechel,  T. Putzmann,  M. Bittens,  H. Weiss,  and  B. Daus,
+   “Volatile organic compounds effective diffusion coefficients and fluxes estimation
+   through  two  types  of  construction  material,”  </span><span class="cmti-9">Indoor  air</span><span class="cmr-9">,  vol. 24,  no. 3,
+   pp. 272–282, 2014.</span>
+</dd><dt>
+<span class="cmr-9">29.</span> </dt><dd><a id="Xcarroll2022peripherally"></a><span class="cmr-9">G. T.  Carroll  and  D. L.  Kirschman,  “A  peripherally  located  air  recirculation
+   device  containing  an  activated  carbon  filter  reduces  voc  levels  in  a  simulated
+   operating room,” </span><span class="cmti-9">ACS omega</span><span class="cmr-9">, vol. 7, no. 50, pp. 46640–46645, 2022.</span>
+</dd><dt>
+<span class="cmr-9">30.</span> </dt><dd><a id="Xpichersky2002formation"></a><span class="cmr-9">E. Pichersky and J. Gershenzon, “The formation and function of plant volatiles:
+   perfumes for pollinator attraction and defense,” </span><span class="cmti-9">Current opinion in plant biology</span><span class="cmr-9">,
+   vol. 5, no. 3, pp. 237–243, 2002.</span>
+</dd><dt>
+<span class="cmr-9">31.</span> </dt><dd><a id="Xbaldwin2006volatile"></a><span class="cmr-9">I. T. Baldwin, R. Halitschke, A. Paschold, C. C. Von Dahl, and C. A. Preston,
+   “Volatile signaling in plant-plant interactions:” talking trees” in the genomics era,”
+   </span><span class="cmti-9">science</span><span class="cmr-9">, vol. 311, no. 5762, pp. 812–815, 2006.</span>
+</dd><dt>
+<span class="cmr-9">32.</span> </dt><dd><a id="Xallison2016pheromone"></a><span class="cmr-9">J. D. Allison and R. T. CardŽ, </span><span class="cmti-9">Pheromone communication in moths: evolution,
+   behavior, and application</span><span class="cmr-9">. Univ of California Press, 2016.</span>
+</dd><dt>
+<span class="cmr-9">33.</span> </dt><dd><a id="Xlugg1968diffusion"></a><span class="cmr-9">G. Lugg, “Diffusion coefficients of some organic and other vapors in air,” </span><span class="cmti-9">Analytical
+   Chemistry</span><span class="cmr-9">, vol. 40, no. 7, pp. 1072–1077, 1968.</span>
+</dd><dt>
+<span class="cmr-9">34.</span> </dt><dd><a id="Xtreybal1980mass"></a><span class="cmr-9">R. E. Treybal, “Mass transfer operations,” </span><span class="cmti-9">New York</span><span class="cmr-9">, vol. 466, pp. 493–497, 1980.</span>
+</dd><dt>
+<span class="cmr-9">35.</span> </dt><dd><a id="Xcheng2021development"></a><span class="cmr-9">L. Cheng, Q.-H. Meng, A. J. Lilienthal, and P.-F. Qi, “Development of compact
+   electronic noses: A review,” </span><span class="cmti-9">Measurement Science and Technology</span><span class="cmr-9">, vol. 32, no. 6,
+   p. 062002, 2021.</span>
+</dd><dt>
+<span class="cmr-9">36.</span> </dt><dd><a id="Xtrivino2016challenges"></a><span class="cmr-9">R. Trivino, D. Gaibor, J. Mediavilla, and A. V. Guarnan, “Challenges to embed
+   an electronic nose on a mobile robot,” in </span><span class="cmti-9">2016 IEEE ANDESCON</span><span class="cmr-9">, pp. 1–4, IEEE,
+   2016.</span>
+</dd><dt>
+<span class="cmr-9">37.</span> </dt><dd><a id="Xliu2025lab"></a><span class="cmr-9">X. Liu, X. Liu, B. Li, X. Zhang, and B. Hu, “Lab-on-robot: Unmanned mass
+   spectrometry  robot  for  direct  sample  analysis  in  hazardous  and  radioactive
+   environments,” </span><span class="cmti-9">Analytical Chemistry</span><span class="cmr-9">, vol. 97, no. 17, pp. 9126–9130, 2025.</span>
+</dd><dt>
+<span class="cmr-9">38.</span> </dt><dd><a id="Xdai2024autonomous"></a><span class="cmr-9">T. Dai,          S. Vijayakrishnan,          F. T.          Szczypiński,          J.-F.
+   Ayme, E. Simaei, T. Fellowes, R. Clowes, L. Kotopanov, C. E. Shields, Z. Zhou,
+   </span><span class="cmti-9">et al.</span><span class="cmr-9">, “Autonomous mobile robots for exploratory synthetic chemistry,” </span><span class="cmti-9">Nature</span><span class="cmr-9">,
+   vol. 635, no. 8040, pp. 890–897, 2024.</span>
+</dd><dt>
+<span class="cmr-9">39.</span> </dt><dd><a id="Xmcguiness2020analysis"></a><span class="cmr-9">D. T.  McGuiness,  S. Giannoukos,  S. Taylor,  and  A. Marshall,  “Analysis  of
+   multi-chemical transmission in the macro-scale,” </span><span class="cmti-9">IEEE Transactions on Molecular,
+   Biological, and Multi-Scale Communications</span><span class="cmr-9">, vol. 6, no. 2, pp. 93–106, 2020.</span>
+</dd><dt>
+<span class="cmr-9">40.</span> </dt><dd><a id="Xverdu1994general"></a><span class="cmr-9">S. Verdú  and  T. S.  Han,  “a  General  Formula  for  Channel  Capacity,”  </span><span class="cmti-9">IEEE
+   Transactions on Information Theory</span><span class="cmr-9">, vol. 40, no. 4, pp. 1147–1157, 1994.</span>
+</dd><dt>
+<span class="cmr-9">41.</span> </dt><dd><a id="Xcover2006elements"></a><span class="cmr-9">T. M.    Cover    and    J. A.    Thomas,    </span><span class="cmti-9">Elements   of   Information   Theory</span><span class="cmr-9">.
+   Wiley-Blackwell, </span><!-- l. 207 --><math display="inline"><msup><mrow><mn>2</mn></mrow><mrow><mi mathvariant="italic">𝑛𝑑</mi></mrow></msup></math><span class="cmr-9"> ed.,
+   2006.</span>
+</dd><dt>
+<span class="cmr-9">42.</span> </dt><dd><a id="Xmcguiness2019modulation"></a><span class="cmr-9">D. T.      Mcguiness,      S. Giannoukos,      A. Marshall,      and      S. Taylor,
+   “Modulation analysis in macro-molecular communications,” </span><span class="cmti-9">IEEE Access</span><span class="cmr-9">, vol. 7,
+   pp. 11049–11065, 2019.</span>
+</dd><dt>
+<span class="cmr-9">43.</span> </dt><dd><a id="Xkotz2004continuous"></a><span class="cmr-9">S. Kotz,   N. Balakrishnan,   and   N. L.   Johnson,   </span><span class="cmti-9">Continuous   Multivariate
+   Distributions, Volume 1: Models and Applications</span><span class="cmr-9">.  John Wiley &amp;Sons, 2nd ed.,
+   2004.</span>
+</dd></dl></section>
+<div class="crosslinks-bottom"><span class="nav-inactive"><span class="nav-next">NEXT</span></span> <a href="ConclusionandFutureWork.html"><span class="nav-prev">PREV</span></a><a href="ConclusionandFutureWork.html#tailConclusionandFutureWork.html"><span class="nav-prev-tail">PREV-TAIL</span></a><a href="refname.html"><span class="nav-front">FRONT</span></a><a href="ConferencePaperMain.html#refname.html"><span class="nav-up">UP</span></a><a id="tailrefname.html"></a></div> <div class="footer"> <div class="footer-left"><span class="footer-lecture">Daniel T. McGuiness, Ph.D 
+</span><span class="footer-webBook"><span class="cmbx-10">Last Updated: </span>10.9.2026, at 11:17.</span> </div> </div> <div class="author-notes">
+<span class="note">Authors Note  
+</span><span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line">
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>
