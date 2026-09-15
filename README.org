@@ -1,0 +1,53 @@
+
+#+TITLE: Scent-Based Landmark and Communication for EM Hostile Environments
+
+#+SUBTITLE: ROMANSY 2026
+#+AUTHOR:   D. T. McGuiness, Ph.D
+#+DATE:     14 - 17 September 2027
+
+* Introduction
+
+The following repo is the source files and related information on the paper
+titled "/Scent-Based Landmark and Communication for EM Hostile Environments/".
+
+The repo contains the conference paper, presentation and all the source files,
+written in python, which was used in generating all the technical data.
+
+* Abstract
+
+An effective use of mobile robots is their ability to traverse environments
+which can be hostile or dangerous to human life. This problem is further
+accentuated with environments where communications using electromagnetic wave
+may prove ineffective, such as caves, or collapsed infrastructure. This paper
+proposes a method of establishing a simple communication between robots using
+chemicals. The communication relies on the pathfinder robot leaving scent
+packages to be picked up by another robot which can interpret the action. In
+addition a simple package structure is proposed along with preliminary
+information capacity of communication is analysed. The results show that if
+proper care is given on the selection of chemicals, temporary landmarks could be
+established for robots to communicate without effecting the surrounding
+environment.
+
+* Citing molcom
+
+#+begin_quote
+The molcom presented here is FROZEN to make sure the work presented here is
+reproducible.
+#+end_quote
+
+In the event the code is found to be useful in a work, please use the following
+citation.
+
+#+begin_src bibtex
+@manual{molcom2026,
+  title        = {molcom: a molecular communication simulation platform},
+  author       = {D. T. McGuiness, Ph.D},
+  year         = {2026},
+}
+#+end_src
+
+Finally, as all this work is licensed under [[https://www.gnu.org/licenses/quick-guide-gplv3.html][GNU General Public License]], you are
+free to use, modify and integrate it to your own work as long as that work also
+contains the same license.
+
+Have fun :)
