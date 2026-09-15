@@ -11,8 +11,8 @@
 <link href='logo/lms.ico' rel='icon' type='image/x-icon' /> 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script> 
 <link href='https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css' rel='stylesheet' /> 
-<link href='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css' rel='stylesheet' type='text/css' /> 
-<script async='true' crossorigin='anonymous' src='https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js'></script> 
+<link href='flatweb.css' rel='stylesheet' type='text/css' /> 
+<script async='true' crossorigin='anonymous' src='flatweb.js'></script> 
 <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css' rel='stylesheet' /> 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script> 
 <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css' rel='stylesheet' /> 
@@ -29,15 +29,15 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js'></script> 
  </head><body>
    <page> 
-<nav class='wide'><img class='webbook-logo' src='logo/webbook-logo.svg' /> <div class='header'> <div class='header-left'><span class='header-lecture-grade'>RoManSy 
+  <nav class='wide'><img class='webbook-logo' src='logo/webbook-logo.svg' /> <div class='header'> <div class='header-left'><span class='header-lecture-grade'>RoManSy 
 </span><span class='header-lecture-name'>Scent-Based Landmark and Communication for EM Hostile Environments 
 </span><span class='header-webBook'>WebBook 2.1</span> </div> <div class='header-right'> <span class='header-version'>2026</span> 
- </div></div> <div class='toc'><div class='toc-links'><a href='https://github.com/dTmC0945' title='Lecturer GitHub Repo'><i class='fab fa-github' style='font-size:20px'></i></a><a href='https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ' title='Lecturer Google Scholar Page'><i class='fa-brands fa-google-scholar' style='font-size:20px'></i></a><a href='https://www.researchgate.net/profile/Daniel-Mcguiness-2' title='Lecturer ResearchGate Account'><i class='fa-brands fa-researchgate' style='font-size:20px'></i></a></div><hr /><span class='sectionToc'><span class='number'>1</span><span class='title'><a href='Introduction.html#introduction'>Introduction</a></span></span><span class='sectionToc'><span class='number'>2</span><span class='title'><a href='DefiningthePhysicalLayer.html#defining-the-physical-layer'>Defining the Physical Layer</a></span></span><span class='subsectionToc'><span class='number'>2.1</span><span class='title'><a href='DefiningthePhysicalLayer.html#a-mathematical-model'>A Mathematical Model</a></span></span><span class='sectionToc'><span class='number'>3</span><span class='title'><a href='DefiningtheLandmark.html#defining-the-landmark'>Defining
+ </div></div> <div class='toc'><div class='toc-links'><a href='https://github.com/dTmC0945' title='Lecturer GitHub Repo'><i class='fab fa-github' style='font-size:20px'></i></a><a href='https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ' title='Google Scholar Page'><i class='fa-brands fa-google-scholar' style='font-size:20px'></i></a><a href='https://www.researchgate.net/profile/Daniel-Mcguiness-2' title='ResearchGate Account'><i class='fa-brands fa-researchgate' style='font-size:20px'></i></a><a href='https://www.linkedin.com/in/dtmcguiness/' title='Linkedin'><i class='fa-brands fa-linkedin-in' style='font-size:20px'></i></a><a href='ResearchPresentationLectureSlide.pdf' title='Presentation'><i class='fa-solid fa-person-chalkboard' style='font-size:20px'></i></a></div><hr /><span class='sectionToc'><span class='number'>1</span><span class='title'><a href='Introduction.html#introduction'>Introduction</a></span></span><span class='sectionToc'><span class='number'>2</span><span class='title'><a href='DefiningthePhysicalLayer.html#defining-the-physical-layer'>Defining the Physical Layer</a></span></span><span class='subsectionToc'><span class='number'>2.1</span><span class='title'><a href='DefiningthePhysicalLayer.html#a-mathematical-model'>A Mathematical Model</a></span></span><span class='sectionToc'><span class='number'>3</span><span class='title'><a href='DefiningtheLandmark.html#defining-the-landmark'>Defining
 the Landmark</a></span></span><span class='subsectionToc'><span class='number'>3.1</span><span class='title'><a href='DefiningtheLandmark.html#operation-principle'>Operation Principle</a></span></span><span class='subsectionToc'><span class='number'>3.2</span><span class='title'><a href='DefiningtheLandmark.html#volatile-organic-compounds'>Volatile Organic Compounds</a></span></span><span class='subsectionToc'><span class='number'>3.3</span><span class='title'><a href='DefiningtheLandmark.html#detection-of-chemical-odour'>Detection of
 Chemical Odour</a></span></span><span class='subsectionToc'><span class='number'>3.4</span><span class='title'><a href='DefiningtheLandmark.html#chemical-quadrature-amplitude-modulation'>Chemical Quadrature Amplitude Modulation</a></span></span><span class='sectionToc'><span class='number'>4</span><span class='title'><a href='#communication-tests'>Communication
 Tests</a></span></span><span class='sectionToc'><span class='number'>5</span><span class='title'><a href='ConclusionandFutureWork.html#conclusion-and-future-work'>Conclusion and Future Work</a></span></span>
 <!-- l. 413 --><p class='indent'>   </p><div class='nav-footer'><div class='nav-footer-left'><span class='nav-footer-lecture'>Daniel T. McGuiness, Ph.D 
-</span><span class='nav-footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span></div></div><span class='nav-comments'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav> 
+</span><span class='nav-footer-webBook'><span class='cmbx-10'>Last Updated: </span>15.9.2026, at 10:2.</span></div></div><span class='nav-comments'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span></div></nav> 
 
 <p></p>
    <article class='chapter'> 
@@ -142,7 +142,7 @@ different diffusion coefficient ratios, (b) detection distance (c) listening dur
 
                                                                   
    <div class='crosslinks-bottom'><a href='ConclusionandFutureWork.html'><span class='nav-next'>NEXT</span></a><a href='DefiningtheLandmark.html'><span class='nav-prev'>PREV</span></a><a href='DefiningtheLandmark.html#tailDefiningtheLandmark.html'><span class='nav-prev-tail'>PREV-TAIL</span></a><a href='CommunicationTests.html'><span class='nav-front'>FRONT</span></a><a href='ConferencePaperMain.html#CommunicationTests.html'><span class='nav-up'>UP</span></a><a id='tailCommunicationTests.html'></a> </div> <div class='footer'> <div class='footer-left'><span class='footer-lecture'>Daniel T. McGuiness, Ph.D 
-</span><span class='footer-webBook'><span class='cmbx-10'>Last Updated: </span>10.9.2026, at 11:17.</span> </div> </div> 
+</span><span class='footer-webBook'><span class='cmbx-10'>Last Updated: </span>15.9.2026, at 10:2.</span> </div> </div> 
 <div class='author-notes'> 
 <span class='note'>Authors Note  
 </span><span class='text'>The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. </span> 
